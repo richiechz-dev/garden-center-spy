@@ -33,9 +33,13 @@ Actualmente incluye:
 ## Estado del proyecto - Roadmap
 
 MVP funcional. Próximos pasos:
-   - [ ] Separar capas extract/transform/load
+   - [ ] Separar capas extract/transform/load 
    - [ ] Modelo de datos (Product) con validación
    - [ ] Normalizar estructura de salida entre extractores
    - [ ] Persistencia en Postgres
    - [ ] Soporte para más tiendas (Walmart, etc.)
    - [ ] API con FastAPI
+
+## Arquitectura Planeada
+
+Extract --> Transform --> Load --> Postgres --> API
