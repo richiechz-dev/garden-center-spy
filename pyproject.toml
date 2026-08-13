@@ -5,5 +5,6 @@ description = "Scraper para extraer precios de articulos de plantas desde endpoi
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
+    "pydantic>=2.13.4",
     "requests>=2.34.2",
 ]
