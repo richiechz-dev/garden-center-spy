@@ -9,5 +9,8 @@ class Product(BaseModel):
     sku: str
     price: float
     currency: str = "MXN" # Valor por defecto 
-    store: str
+    store: str 
+    description: str | None = None # Atributo str o nada (opcional) con valor por defecto None
+    image_url: str | None = None
+    product_url: str | None = None
     scraped_at: datetime
