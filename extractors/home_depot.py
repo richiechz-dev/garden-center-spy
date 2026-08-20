@@ -36,11 +36,24 @@ class HomeDepot(Extractor):
             if offer_price is None:
                 continue
 
+            seo_href = item.get("seo", {}).get("href")
+            sku = item.get("partNumber")
+
+            if seo_href and sku:
+                product_url = f"https://www.homedepot.com.mx{seo_href}"
+                image_url = f"https://cdn.homedepot.com.mx/productos/{sku}/{sku}.jpg"
+            else:
+                product_url = None
+                image_url = None
+
             product = Product(
                 name=item.get("name", "Desconocido"),
                 sku=item.get("partNumber", "Desconocido"),
                 price=float(offer_price),
                 store="Home Depot MX",
+                description=item.get("shortDescription", "Sin Descripción"),
+                image_url=image_url,
+                product_url=product_url,
                 scraped_at=datetime.now(UTC),
             )
 
