@@ -1,4 +1,3 @@
-import json
 from datetime import UTC, datetime
 from typing import Any, override
 
@@ -60,15 +59,3 @@ class HomeDepot(Extractor):
             products.append(product)
 
         return products
-
-
-home_depot = HomeDepot(
-    "https://www.homedepot.com.mx/search/resources/api/v2/products?storeId=10351&searchTerm=kwPlantasComestibles&limit=28&offset=0&contractId=4000000000000000003&currency=MXN&langId=-5&marketId=21&stLocId=12605&extendedCatalog=false&marketOnly=true&physicalStoreId=8702&profileName=HCL_V2_findProductsBySearchTermWithPrice&selectedFacets=%5Bobject+Object%5D&minPrice=-1&maxPrice=-1&selectedPageOffset=0&orderBy=0"
-)
-
-if __name__ == "__main__":
-    json_data = json.dumps(home_depot.fetch(), indent=4, ensure_ascii=False)
-    print(json_data)
-
-    products = home_depot.run()
-    print(products)
