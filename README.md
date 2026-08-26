@@ -6,6 +6,9 @@ Scraper en Python para extraer precios de plantas desde endpoints JSON de Home D
 
 Obtener datos de precios de plantas para usarlos como base de un pipeline (extracción y posterior carga a base de datos).
 
+## Alcance actual
+Los precios se extraen únicamente de la sucursal de Hidalgo (`physicalStoreId=8774`). Los precios pueden variar entre sucursales de Home Depot MX; esto es una limitación conocida del MVP, no soportar multi-sucursal aún.
+
 ## Requisitos
 
 - Python 3.14+
@@ -48,7 +51,7 @@ uv run main.py
 - [x] Modelo de datos (Product) con validación
 - [x] Normalizar estructura de salida entre extractores
 - [x] Persistencia en Postgres
-- [ ] Soporte para más tiendas (Walmart, etc.)
+- [ ] Soporte para más tiendas (ikea, etc.)
 - [ ] API con FastAPI
 
 ## Arquitectura
@@ -57,3 +60,5 @@ uv run main.py
 extractors/  →  models.py  →  load/  →  Postgres
   (fetch+parse)   (Pydantic)   (SQLAlchemy)
 ```
+## Nota sobre la fuente de datos
+Este proyecto usa el endpoint JSON interno que la web de Home Depot MX consume (descubierto vía DevTools), no una API pública oficial. Puede dejar de funcionar si Home Depot cambia su estructura interna.
