@@ -1,37 +1,40 @@
-from package_scraping.spy_dynamic_pages import SinglePlantSpy, SpyPlant
+import os
+import sys
 
-def multiple_plants():
-    
-    url = "https://www.homedepot.com.mx/search/resources/api/v2/products?storeId=10351&searchTerm=kwPlantasComestibles&limit=28&offset=0&contractId=4000000000000000003&currency=MXN&langId=-5&marketId=21&stLocId=12605&extendedCatalog=false&marketOnly=true&physicalStoreId=8702&profileName=HCL_V2_findProductsBySearchTermWithPrice&selectedFacets=%5Bobject+Object%5D&minPrice=-1&maxPrice=-1&selectedPageOffset=0&orderBy=0"
-    
-    my_spy = SpyPlant(url)
-    my_spy.spy_on()
-    data = my_spy.get_prices_data()
+from dotenv import load_dotenv
+from requests.exceptions import ConnectionError, HTTPError, Timeout
+from sqlalchemy.exc import SQLAlchemyError
 
-    for plant in data:
-        print(f"Nombre de la planta: {plant['name']}")
-        print(f"Precio: ${plant['price_per_unit']} \n")
+from extractors.home_depot import HomeDepot
+from load.load import load_products
 
-def one_plant():
+load_dotenv()
 
-    url = 'https://www.homedepot.com.mx/search/resources/api/v2/products?storeId=10351&id=20947&catalogId=10101&langId=-5&physicalStoreId=1165&profileName=HDM_V2_findProductByIds_IncludeZeroPrices&contractId=4000000000000000003&currency=MXN'
-
-    spy_potus = SinglePlantSpy(url)
-    spy_potus.spy_on()
-    data = spy_potus.get_prices_data()
-
-    for plant in data:
-        print(f"Nombre: {plant['name']}")
-        print(f"Precio: ${plant['price']} \n")
-
-    
 
 def main():
+    api_url = os.getenv("HOME_DEPOT_API_URL")
+    if not api_url:
+        print("Error: HOME_DEPOT_API_URL no está configurada en .env")
+        sys.exit(1)
 
-    multiple_plants()
-    print("\n")
-    one_plant()
-    
+    try:
+        home_depot = HomeDepot(api_url)
+        products = home_depot.run()
+    except (ConnectionError, Timeout) as e:
+        print(f"Error de conexión con la API: {e}")
+        sys.exit(1)
+    except HTTPError as e:
+        print(f"Error HTTP de la API: {e}")
+        sys.exit(1)
+
+    try:
+        load_products(products)
+    except SQLAlchemyError as e:
+        print(f"Error al cargar en la BD: {e}")
+        sys.exit(1)
+
+    print(f"Se han cargado {len(products)} productos")
+
 
 if __name__ == "__main__":
     main()

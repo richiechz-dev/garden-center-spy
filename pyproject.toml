@@ -5,5 +5,14 @@ description = "Scraper para extraer precios de articulos de plantas desde endpoi
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
+    "psycopg2-binary>=2.9.12",
+    "pydantic>=2.13.4",
+    "python-dotenv>=1.2.3",
     "requests>=2.34.2",
+    "sqlalchemy>=2.0.52",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
 ]
