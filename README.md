@@ -1,6 +1,6 @@
 # Garden_Center_Spy
 
-Scraper en Python para extraer precios de plantas desde endpoints JSON de Home Depot MX unicamente usando la libreria requests. Siendo un proyecto mvp.
+Scraper en Python para extraer precios de plantas desde endpoints JSON de Home Depot MX. Proyecto MVP con pipeline ETL y persistencia en Postgres.
 
 ## Objetivo
 
@@ -10,7 +10,7 @@ Obtener datos de precios de plantas para usarlos como base de un pipeline (extra
 
 - Python 3.14+
 - [uv](https://docs.astral.sh/uv/)
-- Dependencias del `pyproject.toml` (`requests`)
+- Docker (para Postgres)
 
 ## Instalación
 
@@ -18,28 +18,42 @@ Obtener datos de precios de plantas para usarlos como base de un pipeline (extra
 uv sync
 ```
 
-## Uso
+Copia y configura las variables de entorno:
 
-Ejecuta el script principal:
+```bash
+cp .env.example .env
+```
+
+Levanta Postgres:
+
+```bash
+docker compose up -d
+```
+
+Crea las tablas de la BD (solo primera vez):
+
+```bash
+uv run python -m load.connection
+```
+
+## Uso
 
 ```bash
 uv run main.py
 ```
 
-Actualmente incluye:
-- Extracción de múltiples productos (`SpyPlant`)
-- Extracción de producto individual (`SinglePlantSpy`)
-
 ## Estado del proyecto - Roadmap
 
-MVP funcional. Próximos pasos:
-   - [ ] Separar capas extract/transform/load 
-   - [ ] Modelo de datos (Product) con validación
-   - [ ] Normalizar estructura de salida entre extractores
-   - [ ] Persistencia en Postgres
-   - [ ] Soporte para más tiendas (Walmart, etc.)
-   - [ ] API con FastAPI
+- [x] Separar capas extract/transform/load
+- [x] Modelo de datos (Product) con validación
+- [x] Normalizar estructura de salida entre extractores
+- [x] Persistencia en Postgres
+- [ ] Soporte para más tiendas (Walmart, etc.)
+- [ ] API con FastAPI
 
-## Arquitectura Planeada
+## Arquitectura
 
-Extract --> Transform --> Load --> Postgres --> API
+```
+extractors/  →  models.py  →  load/  →  Postgres
+  (fetch+parse)   (Pydantic)   (SQLAlchemy)
+```
