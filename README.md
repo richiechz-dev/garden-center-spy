@@ -1,8 +1,8 @@
 # Garden Center Spy
 
 [![Python 3.14+](https://img.shields.io/badge/python-3.14+-3776AB.svg?logo=python&logoColor=white)](https://www.python.org/downloads/)
-[![pytest](https://img.shields.io/badge/tests-passing-brightgreen.svg)]()
 [![PostgreSQL](https://img.shields.io/badge/postgreSQL-16-4169E1.svg?logo=postgresql&logoColor=white)](https://www.postgresql.org/)
+![Run Status](https://github.com/richiechz-dev/vivero_spy/actions/workflows/scrape.yml/badge.svg)
 
 Scraper en Python para extraer precios de plantas consumiendo APIs JSON públicas de tiendas (no scraping HTML). Pipeline ETL con persistencia en PostgreSQL.
 
@@ -12,7 +12,8 @@ Scraper en Python para extraer precios de plantas consumiendo APIs JSON pública
 - **Pydantic** — validación y modelado de datos
 - **SQLAlchemy** — ORM para persistencia en PostgreSQL
 - **Requests** — consumo de APIs JSON
-- **Docker Compose** — infraestructura de base de datos
+- **Docker Compose** — infraestructura de base de datos (desarrollo local)
+- **Neon (PostgreSQL)** — base de datos persistente en producción
 - **pytest** — tests unitarios
 
 ## Cómo funciona
@@ -26,6 +27,20 @@ Home Depot API  →  Extractor  →  Pydantic Model  →  SQLAlchemy  →  Postg
 2. **Transform**: valida y modela cada producto con Pydantic
 3. **Load**: upsert por SKU en PostgreSQL con historial de precios
 
+## Automated Pipeline
+
+El pipeline corre automáticamente todos los días vía GitHub Actions 
+(`.github/workflows/scrape.yml`), conectado a una instancia persistente 
+de PostgreSQL en [Neon](https://neon.com).
+
+- **Schedule**: diario a las 8:00 AM (hora CDMX / 14:00 UTC)
+- **Trigger manual**: disponible en la pestaña Actions del repo
+- **Persistencia**: el historial de precios se acumula entre corridas en 
+  `price_history`, habilitando análisis de tendencias a lo largo del tiempo
+
+```
+GitHub Actions (cron) → Extract/Transform/Load → Neon Postgres (persistente)
+```
 ## Project Structure
 
 ```
@@ -56,7 +71,7 @@ Los precios se extraen únicamente de la sucursal de Hidalgo (`physicalStoreId=8
 
 - Python 3.14+
 - [uv](https://docs.astral.sh/uv/)
-- Docker (para Postgres)
+  - Docker (para Postgres en local)
 
 ## Instalación
 
@@ -94,6 +109,7 @@ uv run main.py
 - [x] Modelo de datos (Product) con validación
 - [x] Normalizar estructura de salida entre extractores
 - [x] Persistencia en Postgres
+- [x] Automatización con GitHub Actions (cron diario)
 - [ ] Soporte para más tiendas (ikea, etc.)
 - [ ] API con FastAPI
 
