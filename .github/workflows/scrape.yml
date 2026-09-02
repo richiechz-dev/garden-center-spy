@@ -1,0 +1,25 @@
+name: Scrape Home Depot Prices
+
+on:
+  schedule:
+    - cron: "0 14 * * *"   # 8:00 AM hora CDMX (UTC-6)
+  workflow_dispatch:        # permite correrlo manualmente desde la pestaña Actions
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    env:
+      DATABASE_URL: ${{ secrets.DATABASE_URL }}
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v3
+
+      - name: Install dependencies
+        run: uv sync
+
+      - name: Run pipeline
+        run: uv run main.py
