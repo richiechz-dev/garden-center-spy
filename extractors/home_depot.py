@@ -16,10 +16,37 @@ class HomeDepot(Extractor):
             "accept-language": "es-419,es;q=0.9",
         }
 
-        response = requests.get(self.url, headers)
+        limit = 28
+        offset = 0
+        all_contents = []
 
+        # Primera llamada (offset=0) — obtenemos también el total
+        url = self.url.replace("offset=0", f"offset={offset}")
+        response = requests.get(url, headers=headers)
         response.raise_for_status()
-        return response.json()
+        data = response.json()
+
+        all_contents.extend(data.get("contents", []))
+        total = data.get("total", 0)
+        offset += limit
+
+        # Páginas siguientes, mientras falten productos
+        while offset < total:
+            url = self.url.replace("offset=0", f"offset={offset}")
+            response = requests.get(url, headers=headers)
+            response.raise_for_status()
+            data = response.json()
+
+            all_contents.extend(data.get("contents", []))
+            offset += limit
+
+        unique_contents = {}
+
+        for item in all_contents:
+            sku = item.get("partNumber")
+            unique_contents[sku] = item
+
+        return {"contents": list(unique_contents.values())}
 
     @override
     def parse(self, raw_data: dict[str, Any]) -> list[Product]:

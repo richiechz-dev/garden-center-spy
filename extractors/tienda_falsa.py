@@ -21,6 +21,8 @@ class TiendaFalsa(Extractor):
         return products
 
 
-tienda = TiendaFalsa("http://url-prueba.com")
-productos = tienda.run()
-print(productos)
+
+if __name__ == "__main__":
+    tienda = TiendaFalsa("http://url-prueba.com")
+    productos = tienda.run()
+    print(productos)
