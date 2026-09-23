@@ -1,0 +1,961 @@
+{
+  "usergroup": "[SIK_NULL_TEST_20260916:B]",
+  "results": [
+    {
+      "component": "PRIMARY_AREA",
+      "viewMode": "GRID",
+      "filters": [
+        {
+          "selected": false,
+          "id": "MEASUREMENT_BUCKETS",
+          "name": "Tamaño",
+          "collapsed": false,
+          "type": "TYPED_CLASS_FILTER",
+          "parameter": "f-measurement-buckets",
+          "eventAction": "filter_by_measurement_bucket",
+          "enabled": true,
+          "actionTokens": [],
+          "types": [
+            {
+              "id": "HEIGHT",
+              "name": "Altura",
+              "values": [
+                {
+                  "name": "0 - 9 cm",
+                  "id": "HEIGHT_0_10",
+                  "count": 1,
+                  "selected": false,
+                  "enabled": true
+                },
+                {
+                  "name": "10 - 19 cm",
+                  "id": "HEIGHT_10_20",
+                  "count": 4,
+                  "selected": false,
+                  "enabled": true
+                },
+                {
+                  "name": "20 - 29 cm",
+                  "id": "HEIGHT_20_30",
+                  "count": 7,
+                  "selected": false,
+                  "enabled": true
+                },
+                {
+                  "name": "30 - 39 cm",
+                  "id": "HEIGHT_30_40",
+                  "count": 4,
+                  "selected": false,
+                  "enabled": true
+                },
+                {
+                  "name": "40+ cm",
+                  "id": "HEIGHT_40_9223372036854775807",
+                  "count": 7,
+                  "selected": false,
+                  "enabled": true
+                }
+              ]
+            },
+            {
+              "id": "DIAMETER",
+              "name": "Diámetro",
+              "values": [
+                {
+                  "name": "5 - 9 cm",
+                  "id": "DIAMETER_5_10",
+                  "count": 1,
+                  "selected": false,
+                  "enabled": true
+                },
+                {
+                  "name": "10 - 14 cm",
+                  "id": "DIAMETER_10_15",
+                  "count": 7,
+                  "selected": false,
+                  "enabled": true
+                },
+                {
+                  "name": "15 - 19 cm",
+                  "id": "DIAMETER_15_20",
+                  "count": 10,
+                  "selected": false,
+                  "enabled": true
+                },
+                {
+                  "name": "20+ cm",
+                  "id": "DIAMETER_20_9223372036854775807",
+                  "count": 5,
+                  "selected": false,
+                  "enabled": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "selected": false,
+          "values": [
+            {
+              "name": "Colocar lejos de la luz del sol",
+              "id": "54920",
+              "count": 17,
+              "selected": false,
+              "enabled": true
+            },
+            {
+              "name": "Regar moderadamente",
+              "id": "54921",
+              "count": 14,
+              "selected": false,
+              "enabled": true
+            },
+            {
+              "name": "De fácil mantenimiento",
+              "id": "54917",
+              "count": 9,
+              "selected": false,
+              "enabled": true
+            },
+            {
+              "name": "Regar poco",
+              "id": "54923",
+              "count": 6,
+              "selected": false,
+              "enabled": true
+            },
+            {
+              "name": "Colocar en un lugar iluminado",
+              "id": "54918",
+              "count": 4,
+              "selected": false,
+              "enabled": true
+            },
+            {
+              "name": "Regar a con frecuencia",
+              "id": "54922",
+              "count": 2,
+              "selected": false,
+              "enabled": true
+            },
+            {
+              "name": "Colocar a la sombra",
+              "id": "54919",
+              "count": 1,
+              "selected": false,
+              "enabled": true
+            }
+          ],
+          "id": "PLANT_CARE",
+          "name": "Cuidado de las plantas",
+          "collapsed": false,
+          "type": "CLASS_FILTER",
+          "parameter": "f-plant-care",
+          "eventAction": "filter_by_plant_care",
+          "enabled": true,
+          "actionTokens": []
+        },
+        {
+          "selected": false,
+          "values": [
+            {
+              "name": "verde",
+              "id": "10033",
+              "count": 22,
+              "selected": false,
+              "enabled": true,
+              "hex": "3b7d22"
+            },
+            {
+              "name": "blanco",
+              "id": "10156",
+              "count": 5,
+              "selected": false,
+              "enabled": true,
+              "hex": "ffffff"
+            },
+            {
+              "name": "rojo",
+              "id": "10124",
+              "count": 4,
+              "selected": false,
+              "enabled": true,
+              "hex": "f00f00"
+            },
+            {
+              "name": "multicolor",
+              "id": "10583",
+              "count": 4,
+              "selected": false,
+              "enabled": true
+            },
+            {
+              "name": "lila",
+              "id": "10064",
+              "count": 3,
+              "selected": false,
+              "enabled": true,
+              "hex": "a96ecc"
+            },
+            {
+              "name": "rosa",
+              "id": "10119",
+              "count": 3,
+              "selected": false,
+              "enabled": true,
+              "hex": "ffb8c3"
+            },
+            {
+              "name": "amarillo",
+              "id": "10042",
+              "count": 2,
+              "selected": false,
+              "enabled": true,
+              "hex": "ffdb00"
+            },
+            {
+              "name": "naranja",
+              "id": "10112",
+              "count": 2,
+              "selected": false,
+              "enabled": true,
+              "hex": "ff9a02"
+            }
+          ],
+          "id": "COLOR",
+          "name": "Color",
+          "collapsed": false,
+          "type": "CLASS_FILTER",
+          "parameter": "f-colors",
+          "eventAction": "filter_by_color",
+          "enabled": true,
+          "actionTokens": []
+        },
+        {
+          "selected": false,
+          "values": [
+            {
+              "name": "Plantas de escritorio",
+              "id": "700523",
+              "count": 16,
+              "selected": false,
+              "enabled": true
+            },
+            {
+              "name": "Plantas con flores",
+              "id": "700527",
+              "count": 5,
+              "selected": false,
+              "enabled": true
+            },
+            {
+              "name": "Plantas de suelo",
+              "id": "700524",
+              "count": 4,
+              "selected": false,
+              "enabled": true
+            },
+            {
+              "name": "Plantas colgantes y trepadoras",
+              "id": "700525",
+              "count": 3,
+              "selected": false,
+              "enabled": true
+            }
+          ],
+          "id": "CATEGORIES",
+          "name": "Categoría",
+          "collapsed": false,
+          "type": "CLASS_FILTER",
+          "parameter": "f-subcategories",
+          "eventAction": "filter_by_category",
+          "enabled": true,
+          "actionTokens": []
+        },
+        {
+          "selected": false,
+          "values": [
+            {
+              "name": "$0 - 49",
+              "id": "PRICE_0_5000",
+              "count": 6,
+              "selected": false,
+              "enabled": true
+            },
+            {
+              "name": "$50 - 99",
+              "id": "PRICE_5000_10000",
+              "count": 7,
+              "selected": false,
+              "enabled": true
+            },
+            {
+              "name": "$100 - 149",
+              "id": "PRICE_10000_15000",
+              "count": 2,
+              "selected": false,
+              "enabled": true
+            },
+            {
+              "name": "$150 - 199",
+              "id": "PRICE_15000_20000",
+              "count": 2,
+              "selected": false,
+              "enabled": true
+            },
+            {
+              "name": "$200+",
+              "id": "PRICE_20000_9223372036854775807",
+              "count": 6,
+              "selected": false,
+              "enabled": true
+            }
+          ],
+          "id": "PRICE",
+          "name": "Precio",
+          "collapsed": false,
+          "type": "CLASS_FILTER",
+          "parameter": "f-price-buckets",
+          "eventAction": "filter_by_price",
+          "enabled": true,
+          "actionTokens": []
+        },
+        {
+          "selected": false,
+          "values": [],
+          "id": "AVAILABILITY",
+          "name": "Disponibilidad",
+          "collapsed": false,
+          "type": "CLASS_FILTER",
+          "parameter": "f-availability",
+          "eventAction": "filter_by_availability",
+          "enabled": false,
+          "actionTokens": []
+        },
+        {
+          "selected": false,
+          "id": "SPECIAL_PRICE",
+          "name": "Precio especial",
+          "collapsed": false,
+          "type": "BOOLEAN",
+          "parameter": "f-special-price",
+          "eventAction": "filter_by_special_price",
+          "enabled": true,
+          "actionTokens": [],
+          "count": 1
+        },
+        {
+          "selected": false,
+          "id": "NEW_PRODUCT",
+          "name": "Nuevos productos",
+          "collapsed": true,
+          "type": "BOOLEAN",
+          "parameter": "f-new-product",
+          "eventAction": "filter_by_new_product",
+          "enabled": true,
+          "actionTokens": [],
+          "count": 1
+        },
+        {
+          "selected": false,
+          "values": [
+            {
+              "name": "3",
+              "id": "3",
+              "count": 1,
+              "selected": false,
+              "enabled": true
+            },
+            {
+              "name": "4",
+              "id": "4",
+              "count": 10,
+              "selected": false,
+              "enabled": true
+            },
+            {
+              "name": "5",
+              "id": "5",
+              "count": 7,
+              "selected": false,
+              "enabled": true
+            }
+          ],
+          "id": "RATINGS",
+          "name": "Calificación de los clientes",
+          "collapsed": true,
+          "type": "CLASS_FILTER",
+          "parameter": "f-ratings",
+          "eventAction": "filter_by_rating_value_integer",
+          "enabled": true,
+          "actionTokens": []
+        },
+        {
+          "selected": false,
+          "values": [
+            {
+              "name": "+12 C",
+              "id": "54914",
+              "count": 10,
+              "selected": false,
+              "enabled": true
+            },
+            {
+              "name": "+15 C",
+              "id": "54915",
+              "count": 10,
+              "selected": false,
+              "enabled": true
+            },
+            {
+              "name": "+18 C",
+              "id": "54916",
+              "count": 2,
+              "selected": false,
+              "enabled": true
+            }
+          ],
+          "id": "MINIMUM_TEMPERATURE",
+          "name": "Temperatura mínima",
+          "collapsed": true,
+          "type": "CLASS_FILTER",
+          "parameter": "f-minimum-temperature",
+          "eventAction": "filter_by_minimum_temperature",
+          "enabled": true,
+          "actionTokens": []
+        }
+      ],
+      "dynamicFiltersV1": [
+        {
+          "selected": false,
+          "id": "MEASUREMENT_BUCKETS",
+          "name": "Tamaño",
+          "collapsed": false,
+          "type": "TYPED_CLASS_FILTER",
+          "parameter": "f-measurement-buckets",
+          "eventAction": "filter_by_measurement_bucket",
+          "enabled": true,
+          "actionTokens": [],
+          "types": [
+            {
+              "id": "HEIGHT",
+              "name": "Altura",
+              "values": [
+                {
+                  "name": "40+ cm",
+                  "id": "HEIGHT_40_9223372036854775807",
+                  "count": 7,
+                  "selected": false,
+                  "enabled": true
+                },
+                {
+                  "name": "30 - 39 cm",
+                  "id": "HEIGHT_30_40",
+                  "count": 4,
+                  "selected": false,
+                  "enabled": true
+                },
+                {
+                  "name": "20 - 29 cm",
+                  "id": "HEIGHT_20_30",
+                  "count": 7,
+                  "selected": false,
+                  "enabled": true
+                },
+                {
+                  "name": "10 - 19 cm",
+                  "id": "HEIGHT_10_20",
+                  "count": 4,
+                  "selected": false,
+                  "enabled": true
+                },
+                {
+                  "name": "0 - 9 cm",
+                  "id": "HEIGHT_0_10",
+                  "count": 1,
+                  "selected": false,
+                  "enabled": true
+                }
+              ]
+            },
+            {
+              "id": "DIAMETER",
+              "name": "Diámetro",
+              "values": [
+                {
+                  "name": "20+ cm",
+                  "id": "DIAMETER_20_9223372036854775807",
+                  "count": 5,
+                  "selected": false,
+                  "enabled": true
+                },
+                {
+                  "name": "15 - 19 cm",
+                  "id": "DIAMETER_15_20",
+                  "count": 10,
+                  "selected": false,
+                  "enabled": true
+                },
+                {
+                  "name": "10 - 14 cm",
+                  "id": "DIAMETER_10_15",
+                  "count": 7,
+                  "selected": false,
+                  "enabled": true
+                },
+                {
+                  "name": "5 - 9 cm",
+                  "id": "DIAMETER_5_10",
+                  "count": 1,
+                  "selected": false,
+                  "enabled": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "selected": false,
+          "values": [
+            {
+              "name": "Colocar lejos de la luz del sol",
+              "id": "54920",
+              "count": 17,
+              "selected": false,
+              "enabled": true
+            },
+            {
+              "name": "De fácil mantenimiento",
+              "id": "54917",
+              "count": 9,
+              "selected": false,
+              "enabled": true
+            },
+            {
+              "name": "Regar poco",
+              "id": "54923",
+              "count": 6,
+              "selected": false,
+              "enabled": true
+            },
+            {
+              "name": "Colocar en un lugar iluminado",
+              "id": "54918",
+              "count": 4,
+              "selected": false,
+              "enabled": true
+            },
+            {
+              "name": "Colocar a la sombra",
+              "id": "54919",
+              "count": 1,
+              "selected": false,
+              "enabled": true
+            },
+            {
+              "name": "Regar moderadamente",
+              "id": "54921",
+              "count": 14,
+              "selected": false,
+              "enabled": true
+            },
+            {
+              "name": "Regar a con frecuencia",
+              "id": "54922",
+              "count": 2,
+              "selected": false,
+              "enabled": true
+            }
+          ],
+          "id": "PLANT_CARE",
+          "name": "Cuidado de las plantas",
+          "collapsed": false,
+          "type": "CLASS_FILTER",
+          "parameter": "f-plant-care",
+          "eventAction": "filter_by_plant_care",
+          "enabled": true,
+          "actionTokens": []
+        },
+        {
+          "selected": false,
+          "values": [
+            {
+              "name": "verde",
+              "id": "10033",
+              "count": 22,
+              "selected": false,
+              "enabled": true,
+              "hex": "3b7d22"
+            },
+            {
+              "name": "blanco",
+              "id": "10156",
+              "count": 5,
+              "selected": false,
+              "enabled": true,
+              "hex": "ffffff"
+            },
+            {
+              "name": "amarillo",
+              "id": "10042",
+              "count": 2,
+              "selected": false,
+              "enabled": true,
+              "hex": "ffdb00"
+            },
+            {
+              "name": "rojo",
+              "id": "10124",
+              "count": 4,
+              "selected": false,
+              "enabled": true,
+              "hex": "f00f00"
+            },
+            {
+              "name": "multicolor",
+              "id": "10583",
+              "count": 4,
+              "selected": false,
+              "enabled": true
+            },
+            {
+              "name": "rosa",
+              "id": "10119",
+              "count": 3,
+              "selected": false,
+              "enabled": true,
+              "hex": "ffb8c3"
+            },
+            {
+              "name": "naranja",
+              "id": "10112",
+              "count": 2,
+              "selected": false,
+              "enabled": true,
+              "hex": "ff9a02"
+            },
+            {
+              "name": "lila",
+              "id": "10064",
+              "count": 3,
+              "selected": false,
+              "enabled": true,
+              "hex": "a96ecc"
+            }
+          ],
+          "id": "COLOR",
+          "name": "Color",
+          "collapsed": false,
+          "type": "CLASS_FILTER",
+          "parameter": "f-colors",
+          "eventAction": "filter_by_color",
+          "enabled": true,
+          "actionTokens": []
+        },
+        {
+          "selected": false,
+          "values": [
+            {
+              "name": "Plantas colgantes y trepadoras",
+              "id": "700525",
+              "count": 3,
+              "selected": false,
+              "enabled": true
+            },
+            {
+              "name": "Plantas de escritorio",
+              "id": "700523",
+              "count": 16,
+              "selected": false,
+              "enabled": true
+            },
+            {
+              "name": "Plantas de suelo",
+              "id": "700524",
+              "count": 4,
+              "selected": false,
+              "enabled": true
+            },
+            {
+              "name": "Plantas con flores",
+              "id": "700527",
+              "count": 5,
+              "selected": false,
+              "enabled": true
+            }
+          ],
+          "id": "CATEGORIES",
+          "name": "Categoría",
+          "collapsed": false,
+          "type": "CLASS_FILTER",
+          "parameter": "f-subcategories",
+          "eventAction": "filter_by_category",
+          "enabled": true,
+          "actionTokens": []
+        },
+        {
+          "selected": false,
+          "values": [
+            {
+              "name": "$0 - 49",
+              "id": "PRICE_0_5000",
+              "count": 6,
+              "selected": false,
+              "enabled": true
+            },
+            {
+              "name": "$50 - 99",
+              "id": "PRICE_5000_10000",
+              "count": 7,
+              "selected": false,
+              "enabled": true
+            },
+            {
+              "name": "$100 - 149",
+              "id": "PRICE_10000_15000",
+              "count": 2,
+              "selected": false,
+              "enabled": true
+            },
+            {
+              "name": "$200+",
+              "id": "PRICE_20000_9223372036854775807",
+              "count": 6,
+              "selected": false,
+              "enabled": true
+            },
+            {
+              "name": "$150 - 199",
+              "id": "PRICE_15000_20000",
+              "count": 2,
+              "selected": false,
+              "enabled": true
+            }
+          ],
+          "id": "PRICE",
+          "name": "Precio",
+          "collapsed": false,
+          "type": "CLASS_FILTER",
+          "parameter": "f-price-buckets",
+          "eventAction": "filter_by_price",
+          "enabled": true,
+          "actionTokens": []
+        }
+      ],
+      "dynamicFilters": [
+        {
+          "filterId": "MEASUREMENT_BUCKETS",
+          "filterValueId": "HEIGHT_40_9223372036854775807",
+          "count": 7,
+          "enabled": true,
+          "filterName": "40+ cm",
+          "selected": false,
+          "filterParam": "f-measurement-buckets",
+          "type": "TYPED_CLASS_FILTER"
+        },
+        {
+          "filterId": "PLANT_CARE",
+          "filterValueId": "54920",
+          "count": 17,
+          "enabled": true,
+          "filterName": "Colocar lejos de la luz del sol",
+          "selected": false,
+          "filterParam": "f-plant-care",
+          "type": "CLASS_FILTER"
+        },
+        {
+          "filterId": "COLOR",
+          "filterValueId": "10033",
+          "count": 22,
+          "enabled": true,
+          "filterName": "verde",
+          "selected": false,
+          "filterParam": "f-colors",
+          "type": "CLASS_FILTER"
+        },
+        {
+          "filterId": "MEASUREMENT_BUCKETS",
+          "filterValueId": "DIAMETER_20_9223372036854775807",
+          "count": 5,
+          "enabled": true,
+          "filterName": "20+ cm",
+          "selected": false,
+          "filterParam": "f-measurement-buckets",
+          "type": "TYPED_CLASS_FILTER"
+        },
+        {
+          "filterId": "PLANT_CARE",
+          "filterValueId": "54917",
+          "count": 9,
+          "enabled": true,
+          "filterName": "De fácil mantenimiento",
+          "selected": false,
+          "filterParam": "f-plant-care",
+          "type": "CLASS_FILTER"
+        }
+      ],
+      "items": [
+        {
+          "metadata": "v1;1;PRODUCT;20488330;products_main;",
+          "product": {
+            "name": "EPIPREMNUM",
+            "typeName": "Planta en maceta",
+            "itemMeasureReferenceText": "15 cm",
+            "mainImageUrl": "https://www.ikea.com/mx/es/images/products/epipremnum-planta-en-maceta-telefono__0614547_pe686945_s5.jpg",
+            "pipUrl": "https://www.ikea.com/mx/es/p/epipremnum-planta-en-maceta-telefono-20488330/",
+            "filterClass": "plants",
+            "allProductImage": [
+              {
+                "altText": "EPIPREMNUM Planta en maceta, teléfono, 15 cm",
+                "type": "MAIN_PRODUCT_IMAGE",
+                "url": "https://www.ikea.com/mx/es/images/products/epipremnum-planta-en-maceta-telefono__0614547_pe686945_s5.jpg"
+              },
+              {
+                "altText": "EPIPREMNUM Planta en maceta, teléfono, 15 cm",
+                "type": "QUALITY_PRODUCT_IMAGE",
+                "url": "https://www.ikea.com/mx/es/images/products/epipremnum-planta-en-maceta-telefono__0900464_pe668078_s5.jpg"
+              }
+            ],
+            "id": "20488330",
+            "itemNoGlobal": "20488330",
+            "onlineSellable": false,
+            "lastChance": false,
+            "gprDescription": { "numberOfVariants": 0, "variants": [] },
+            "colors": [{ "name": "verde", "id": "10033", "hex": "3b7d22" }],
+            "tag": "NONE",
+            "quickFacts": [],
+            "features": [],
+            "availability": [
+              {
+                "type2": "HOME_DELIVERY",
+                "status": "OUT_OF_STOCK",
+                "text": "Actualmente no está disponible para entrega a domicilio"
+              }
+            ],
+            "ratingValue": 4.8,
+            "ratingCount": 31,
+            "itemNo": "20488330",
+            "itemType": "ART",
+            "salesPrice": {
+              "currencyCode": "MXN",
+              "numeral": 49.0,
+              "current": {
+                "prefix": "$",
+                "wholeNumber": "49",
+                "separator": "",
+                "decimals": "",
+                "suffix": "",
+                "isRegularCurrency": false,
+                "style": "SUPER"
+              },
+              "isBreathTaking": false,
+              "discount": "",
+              "tag": "NONE",
+              "priceText": "Precio",
+              "tags": [],
+              "tagWithText": { "tag": "NONE" }
+            },
+            "contextualImageUrl": "https://www.ikea.com/mx/es/images/products/epipremnum-planta-en-maceta-telefono__0900464_pe668078_s5.jpg",
+            "contextualImageAlt": "EPIPREMNUM Planta en maceta, teléfono, 15 cm",
+            "mainImageAlt": "EPIPREMNUM Planta en maceta, teléfono, 15 cm",
+            "businessStructure": {
+              "homeFurnishingBusinessName": "Decoration",
+              "homeFurnishingBusinessNo": "16",
+              "productAreaName": "Plants",
+              "productAreaNo": "1622",
+              "productRangeAreaName": "Green decoration",
+              "productRangeAreaNo": "162"
+            },
+            "categoryPath": [
+              { "name": "Muebles de jardín", "key": "od001" },
+              {
+                "name": "Plantas naturales y macetas de exterior",
+                "key": "31787"
+              },
+              { "name": "Plantas naturales", "key": "10779" },
+              { "name": "Plantas de escritorio", "key": "700523" }
+            ],
+            "homeDelivery": "OUT_OF_STOCK",
+            "validDesignText": "teléfono",
+            "heroBackoffData": {},
+            "optimizelyAttributes": { "PRODUCT_TYPE": "standard" }
+          },
+          "type": "PRODUCT",
+          "label": "Producto",
+          "actionTokens": [],
+          "isBreakout": false
+        }
+      ],
+      "sortOrders": {
+        "name": "Ordenar",
+        "values": [
+          {
+            "id": "RELEVANCE",
+            "name": "Mejor coincidencia",
+            "eventAction": "sort_by_relevance",
+            "selected": true
+          },
+          {
+            "id": "PRICE_LOW_TO_HIGH",
+            "name": "Precio: de menor a mayor",
+            "eventAction": "sort_by_price_low",
+            "selected": false
+          },
+          {
+            "id": "PRICE_HIGH_TO_LOW",
+            "name": "Precio: de mayor a menor",
+            "eventAction": "sort_by_price_high",
+            "selected": false
+          },
+          {
+            "id": "NEWEST",
+            "name": "El más nuevo",
+            "eventAction": "sort_by_newest",
+            "selected": false
+          },
+          {
+            "id": "RATING",
+            "name": "Calificación de los clientes",
+            "eventAction": "sort_by_rating",
+            "selected": false
+          },
+          {
+            "id": "NAME_ASCENDING",
+            "name": "Nombre",
+            "eventAction": "sort_by_name",
+            "selected": false
+          },
+          {
+            "id": "MOST_POPULAR",
+            "name": "Más popular",
+            "eventAction": "sort_by_most_popular",
+            "selected": false
+          },
+          {
+            "id": "HEIGHT",
+            "name": "Altura",
+            "eventAction": "sort_by_height",
+            "selected": false
+          }
+        ]
+      },
+      "metadata": {
+        "start": 0,
+        "end": 23,
+        "max": 23,
+        "itemsPerType": { "PRODUCT": 23 }
+      }
+    }
+  ],
+  "testActivationTriggers": {
+    "onLoad": ["sik_null_test_20260916_default:B55RSZvdcuDQ8kD1YxvvN"]
+  },
+  "metadata": {
+    "categoryPage": {
+      "categoryName": "Plantas naturales",
+      "categoryKey": "10779",
+      "categoryUrl": "https://www.ikea.com/mx/es/cat/plants-10779/",
+      "categoryParents": ["pp001", "pp003"]
+    }
+  }
+}

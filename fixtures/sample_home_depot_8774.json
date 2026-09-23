@@ -1,0 +1,1562 @@
+{
+  "metaData": { "price": "1" },
+  "breadCrumbTrailEntryView": [
+    {
+      "label": "Jardín",
+      "type_": "FACET_ENTRY_CATEGORY",
+      "value": "10004",
+      "seo": { "href": "/jardin" }
+    },
+    {
+      "label": "Plantas",
+      "type_": "FACET_ENTRY_CATEGORY",
+      "value": "10589",
+      "seo": { "href": "/jardin/plantas" }
+    },
+    {
+      "label": "Plantas de follaje",
+      "type_": "FACET_ENTRY_CATEGORY",
+      "value": "11156",
+      "seo": { "href": "/jardin/plantas/plantas-de-follaje" }
+    }
+  ],
+  "contents": [
+    {
+      "hasSingleSKU": false,
+      "buyable": "true",
+      "x_ratings.total_recommendations": "5",
+      "shortDescription": "Planta Sedum estrella natural para exterior con media sombra, ideal para decoración natural y follaje ornamental. Presenta hojas gruesas de color verde que aportan textura visual y viene en maceta de 6 pulgadas con medidas de 17 x 16 cm.",
+      "x_measurements.quantityMeasure": "C62",
+      "x_ratings.rating": "4.4",
+      "parentCatalogGroupID": "/10004/10589/11156",
+      "inventories.M290.quantity": "2.0",
+      "inventories.12526.quantity": "2.0",
+      "x_prices.8774.mxn": "62.0",
+      "thumbnailRaw": "productos/136837/136837.jpg",
+      "thumbnail": "/hclstore/HDM-CAS/productos/136837/136837.jpg",
+      "seo": {
+        "href": "/p/sedum-estrella-natural-exterior-media-sombra-ornamental-maceta-6-verde-sedum-estrella-136837"
+      },
+      "partNumber": "136837",
+      "storeID": "10351",
+      "keyword": "kwPlantasTemperaturaE. kwPlantasTemperaturaC",
+      "x_prices.8774.field1": "X",
+      "sellerId": "7333333333333333935",
+      "name": "SEDUM ESTRELLA NATURAL EXTERIOR MEDIA SOMBRA ORNAMENTAL MACETA 6\" VERDE",
+      "x_ratings.total_reviews": "9",
+      "identifier.sku.normalized": "136837",
+      "attachments.url": [
+        "productos/136837/136837-m.jpg",
+        "productos/136837/136837-p1.jpg",
+        "productos/136837/136837-p2.jpg",
+        "productos/136837/136837-p3.jpg",
+        "productos/136837/136837-p4.jpg",
+        "productos/136837/136837-p5.jpg",
+        "productos/136837/136837-p6.jpg",
+        "productos/136837/136837-a1.jpg",
+        "productos/136837/136837-a2.jpg",
+        "productos/136837/136837-a3.jpg",
+        "productos/136837/136837-a4.jpg",
+        "productos/136837/136837-a5.jpg",
+        "productos/136837/136837-a6.jpg",
+        "productos/136837/136837-z.jpg",
+        "productos/136837/136837-za1.jpg",
+        "productos/136837/136837-za2.jpg",
+        "productos/136837/136837-za3.jpg",
+        "productos/136837/136837-za4.jpg",
+        "productos/136837/136837-za5.jpg",
+        "productos/136837/136837-za6.jpg",
+        "productos/136837/136837-g.pdf",
+        "productos/136837/136837-m.pdf",
+        "productos/136837/136837-e.pdf",
+        "productos/136837/136837-xd.jpg",
+        "productos/136837/136837-xm.jpg"
+      ],
+      "parentCatalogEntryID": "662173",
+      "x_measurements.nominalQuantity": "1.0",
+      "x_measurements.weightMeasure": "EA",
+      "identifier.sku.parent": "136837p",
+      "price": [
+        {
+          "description": "I",
+          "currency": "MXN",
+          "field1": {},
+          "value": "62.0",
+          "usage": "Offer"
+        },
+        {
+          "description": "L",
+          "currency": "MXN",
+          "value": "62.0",
+          "usage": "Display"
+        }
+      ],
+      "attributes": [
+        {
+          "identifier": "PRO_MARKET_BUYABLE_EXCLUDE",
+          "attribute.natural": "[]",
+          "usage": "Descriptive",
+          "values": [{ "value": ["365", "377", "385", "370", "374", "384"] }],
+          "displayable": "false",
+          "merchandisable": "false",
+          "searchable": "false",
+          "sequence": "1.0",
+          "storeDisplay": "false",
+          "name": "Markets for PRO where buyable is disabled",
+          "facetable": "false",
+          "id": "25069",
+          "comparable": "false",
+          "swatchable": "false"
+        },
+        {
+          "identifier": "PRO_ONLINE_ONLY_SELLING_STORE",
+          "attribute.natural": "[]",
+          "usage": "Descriptive",
+          "values": [{ "value": "1123" }],
+          "displayable": "false",
+          "merchandisable": "false",
+          "searchable": "false",
+          "sequence": "1.0",
+          "storeDisplay": "false",
+          "name": "Online Only Selling Store for PRO",
+          "facetable": "false",
+          "id": "25067",
+          "comparable": "false",
+          "swatchable": "false"
+        },
+        {
+          "identifier": "FULFILLMENT_TYPE",
+          "attribute.natural": "[]",
+          "usage": "Descriptive",
+          "values": [{ "value": ["Store", "Online Only"] }],
+          "displayable": "false",
+          "merchandisable": "false",
+          "searchable": "false",
+          "sequence": "1.0",
+          "storeDisplay": "false",
+          "name": "Tipo de Productos",
+          "facetable": "false",
+          "id": "11001",
+          "comparable": "false",
+          "swatchable": "false"
+        },
+        {
+          "identifier": "MARKET_BUYABLE_EXCLUDE",
+          "attribute.natural": "[]",
+          "usage": "Descriptive",
+          "values": [{ "value": ["365", "370", "374", "377", "385", "384"] }],
+          "displayable": "false",
+          "merchandisable": "false",
+          "searchable": "false",
+          "sequence": "1.0",
+          "storeDisplay": "false",
+          "name": "Markets where buyable is disabled",
+          "facetable": "false",
+          "id": "11002",
+          "comparable": "false",
+          "swatchable": "false"
+        },
+        {
+          "identifier": "LARGO",
+          "attribute.natural": "[\"17 cm\"]",
+          "usage": "Descriptive",
+          "values": [{ "unitID": "CMT", "value": "17 cm" }],
+          "displayable": "true",
+          "merchandisable": "false",
+          "searchable": "true",
+          "sequence": "1.0",
+          "storeDisplay": "false",
+          "name": "Largo",
+          "facetable": "false",
+          "id": "10138",
+          "comparable": "false",
+          "swatchable": "false"
+        },
+        {
+          "identifier": "UPC",
+          "attribute.natural": "[]",
+          "usage": "Descriptive",
+          "values": [{ "value": "7502218898477" }],
+          "displayable": "false",
+          "merchandisable": "false",
+          "searchable": "false",
+          "sequence": "1.0",
+          "storeDisplay": "false",
+          "name": "UPC",
+          "facetable": "false",
+          "id": "11012",
+          "comparable": "false",
+          "swatchable": "false"
+        },
+        {
+          "identifier": "STORE_ONLY_AVAILABLE",
+          "attribute.natural": "[]",
+          "usage": "Descriptive",
+          "values": [
+            {
+              "value": [
+                "10",
+                "120",
+                "130",
+                "140",
+                "150",
+                "200",
+                "210",
+                "260",
+                "270",
+                "290",
+                "320",
+                "350",
+                "354",
+                "363",
+                "365",
+                "367",
+                "369",
+                "371",
+                "373",
+                "375",
+                "377",
+                "379",
+                "381",
+                "383",
+                "385",
+                "501",
+                "503",
+                "505",
+                "60",
+                "70",
+                "80",
+                "90",
+                "110",
+                "160",
+                "170",
+                "180",
+                "190",
+                "20",
+                "220",
+                "230",
+                "240",
+                "250",
+                "30",
+                "300",
+                "310",
+                "351",
+                "353",
+                "355",
+                "357",
+                "359",
+                "362",
+                "364",
+                "370",
+                "372",
+                "374",
+                "376",
+                "378",
+                "380",
+                "382",
+                "384",
+                "40",
+                "50",
+                "500",
+                "502",
+                "504",
+                "386",
+                "21",
+                "22"
+              ]
+            }
+          ],
+          "displayable": "false",
+          "merchandisable": "false",
+          "searchable": "false",
+          "sequence": "1.0",
+          "storeDisplay": "false",
+          "name": "Markets where the product is only displayable",
+          "facetable": "false",
+          "id": "11011",
+          "comparable": "false",
+          "swatchable": "false"
+        },
+        {
+          "identifier": "PROMOICON_MSI",
+          "attribute.natural": "[]",
+          "usage": "Descriptive",
+          "values": [],
+          "displayable": "false",
+          "merchandisable": "true",
+          "searchable": "true",
+          "sequence": "1.0",
+          "storeDisplay": "true",
+          "name": "Meses sin intereses",
+          "facetable": "true",
+          "id": "11018",
+          "comparable": "false",
+          "swatchable": "false"
+        },
+        {
+          "identifier": "PRO_STORE_ONLY_AVAILABLE",
+          "attribute.natural": "[]",
+          "usage": "Descriptive",
+          "values": [
+            {
+              "value": [
+                "10",
+                "120",
+                "130",
+                "140",
+                "150",
+                "200",
+                "210",
+                "260",
+                "270",
+                "290",
+                "320",
+                "350",
+                "354",
+                "363",
+                "365",
+                "367",
+                "369",
+                "371",
+                "373",
+                "375",
+                "377",
+                "379",
+                "381",
+                "383",
+                "385",
+                "501",
+                "503",
+                "505",
+                "60",
+                "70",
+                "80",
+                "90",
+                "110",
+                "160",
+                "170",
+                "180",
+                "190",
+                "21",
+                "220",
+                "230",
+                "240",
+                "250",
+                "30",
+                "300",
+                "310",
+                "351",
+                "353",
+                "355",
+                "357",
+                "359",
+                "362",
+                "364",
+                "370",
+                "372",
+                "374",
+                "376",
+                "378",
+                "380",
+                "382",
+                "384",
+                "40",
+                "50",
+                "500",
+                "502",
+                "504",
+                "22",
+                "20",
+                "386"
+              ]
+            }
+          ],
+          "displayable": "false",
+          "merchandisable": "false",
+          "searchable": "false",
+          "sequence": "1.0",
+          "storeDisplay": "false",
+          "name": "Markets for PRO where the product is only displaya",
+          "facetable": "false",
+          "id": "25070",
+          "comparable": "false",
+          "swatchable": "false"
+        },
+        {
+          "identifier": "PROMOICON_CE",
+          "attribute.natural": "[]",
+          "usage": "Descriptive",
+          "values": [],
+          "displayable": "false",
+          "merchandisable": "true",
+          "searchable": "true",
+          "sequence": "2.0",
+          "storeDisplay": "true",
+          "name": "Compra Especial",
+          "facetable": "true",
+          "id": "11014",
+          "comparable": "false",
+          "swatchable": "false"
+        },
+        {
+          "identifier": "ANCHO",
+          "attribute.natural": "[]",
+          "usage": "Descriptive",
+          "values": [{ "unitID": "CMT", "value": "16 cm" }],
+          "displayable": "true",
+          "merchandisable": "false",
+          "searchable": "false",
+          "sequence": "2.0",
+          "storeDisplay": "false",
+          "name": "Ancho",
+          "facetable": "false",
+          "id": "10006",
+          "comparable": "false",
+          "swatchable": "false"
+        },
+        {
+          "identifier": "PROFUNDIDAD",
+          "attribute.natural": "[]",
+          "usage": "Descriptive",
+          "values": [{ "unitID": "CMT", "value": "16 cm" }],
+          "displayable": "true",
+          "merchandisable": "false",
+          "searchable": "false",
+          "sequence": "3.0",
+          "storeDisplay": "false",
+          "name": "Profundidad",
+          "facetable": "false",
+          "id": "10203",
+          "comparable": "false",
+          "swatchable": "false"
+        },
+        {
+          "identifier": "DIÁMETRO",
+          "attribute.natural": "[\"16 cm\"]",
+          "usage": "Descriptive",
+          "values": [{ "unitID": "CMT", "value": "16 cm" }],
+          "displayable": "true",
+          "merchandisable": "false",
+          "searchable": "true",
+          "sequence": "4.0",
+          "storeDisplay": "false",
+          "name": "Diámetro",
+          "facetable": "true",
+          "id": "35601",
+          "comparable": "false",
+          "swatchable": "false"
+        },
+        {
+          "identifier": "MATERIAL",
+          "attribute.natural": "[\"Planta\"]",
+          "usage": "Descriptive",
+          "values": [{ "value": "Planta" }],
+          "displayable": "true",
+          "merchandisable": "false",
+          "searchable": "true",
+          "sequence": "6.0",
+          "storeDisplay": "false",
+          "name": "Material",
+          "facetable": "true",
+          "id": "10100",
+          "comparable": "false",
+          "swatchable": "false"
+        },
+        {
+          "identifier": "COLOR",
+          "attribute.natural": "[\"Verde\"]",
+          "usage": "Descriptive",
+          "values": [{ "value": "Verde" }],
+          "displayable": "true",
+          "merchandisable": "false",
+          "searchable": "true",
+          "sequence": "7.0",
+          "storeDisplay": "false",
+          "name": "Color",
+          "facetable": "true",
+          "id": "10065",
+          "comparable": "false",
+          "swatchable": "false"
+        },
+        {
+          "identifier": "PROMOICON_HV",
+          "attribute.natural": "[\"1162\",\"1164\",\"8082\",\"8086\",\"8094\",\"8628\",\"8636\",\"8638\",\"8642\",\"8644\",\"8646\",\"8648\",\"8651\",\"8653\",\"8656\",\"8658\",\"8661\",\"8663\",\"8672\",\"8674\",\"8676\",\"8682\",\"8692\",\"8694\",\"8698\",\"8702\",\"8704\",\"8706\",\"8708\",\"8714\",\"8719\",\"8725\",\"8723\",\"8727\",\"8729\",\"8733\",\"8735\",\"8738\",\"8740\",\"8742\",\"8744\",\"8746\",\"8748\",\"8752\",\"8757\",\"8760\",\"8762\",\"8765\",\"8767\",\"8769\",\"8772\",\"8775\",\"8777\",\"8781\",\"8785\",\"8789\",\"8795\",\"8797\",\"8852\",\"8857\",\"1161\",\"1163\",\"1166\",\"8085\",\"8088\",\"8626\",\"8635\",\"8637\",\"8639\",\"8643\",\"8645\",\"8647\",\"8649\",\"8652\",\"8654\",\"8657\",\"8659\",\"8662\",\"8664\",\"8673\",\"8675\",\"8677\",\"8691\",\"8693\",\"8696\",\"8701\",\"8703\",\"8705\",\"8707\",\"8710\",\"8713\",\"8716\",\"8720\",\"8724\",\"8726\",\"8728\",\"8730\",\"8734\",\"8736\",\"8739\",\"8741\",\"8743\",\"8745\",\"8747\",\"8751\",\"8754\",\"8759\",\"8761\",\"8763\",\"8766\",\"8768\",\"8771\",\"8774\",\"8776\",\"8778\",\"8784\",\"8788\",\"8793\",\"8796\",\"8798\",\"8854\",\"8860\",\"1168\",\"1165\",\"1167\",\"1169\",\"1176\",\"1170\",\"1174\",\"1175\",\"1123\",\"1327\",\"1328\",\"1331\",\"1333\",\"1335\",\"1325\",\"1342\",\"4038\",\"1137\",\"8756\",\"8786\",\"8670\"]",
+          "usage": "Descriptive",
+          "values": [
+            {
+              "value": [
+                "1162",
+                "1164",
+                "8082",
+                "8086",
+                "8094",
+                "8628",
+                "8636",
+                "8638",
+                "8642",
+                "8644",
+                "8646",
+                "8648",
+                "8651",
+                "8653",
+                "8656",
+                "8658",
+                "8661",
+                "8663",
+                "8672",
+                "8674",
+                "8676",
+                "8682",
+                "8692",
+                "8694",
+                "8698",
+                "8702",
+                "8704",
+                "8706",
+                "8708",
+                "8714",
+                "8719",
+                "8725",
+                "8723",
+                "8727",
+                "8729",
+                "8733",
+                "8735",
+                "8738",
+                "8740",
+                "8742",
+                "8744",
+                "8746",
+                "8748",
+                "8752",
+                "8757",
+                "8760",
+                "8762",
+                "8765",
+                "8767",
+                "8769",
+                "8772",
+                "8775",
+                "8777",
+                "8781",
+                "8785",
+                "8789",
+                "8795",
+                "8797",
+                "8852",
+                "8857",
+                "1161",
+                "1163",
+                "1166",
+                "8085",
+                "8088",
+                "8626",
+                "8635",
+                "8637",
+                "8639",
+                "8643",
+                "8645",
+                "8647",
+                "8649",
+                "8652",
+                "8654",
+                "8657",
+                "8659",
+                "8662",
+                "8664",
+                "8673",
+                "8675",
+                "8677",
+                "8691",
+                "8693",
+                "8696",
+                "8701",
+                "8703",
+                "8705",
+                "8707",
+                "8710",
+                "8713",
+                "8716",
+                "8720",
+                "8724",
+                "8726",
+                "8728",
+                "8730",
+                "8734",
+                "8736",
+                "8739",
+                "8741",
+                "8743",
+                "8745",
+                "8747",
+                "8751",
+                "8754",
+                "8759",
+                "8761",
+                "8763",
+                "8766",
+                "8768",
+                "8771",
+                "8774",
+                "8776",
+                "8778",
+                "8784",
+                "8788",
+                "8793",
+                "8796",
+                "8798",
+                "8854",
+                "8860",
+                "1168",
+                "1165",
+                "1167",
+                "1169",
+                "1176",
+                "1170",
+                "1174",
+                "1175",
+                "1123",
+                "1327",
+                "1328",
+                "1331",
+                "1333",
+                "1335",
+                "1325",
+                "1342",
+                "4038",
+                "1137",
+                "8756",
+                "8786",
+                "8670"
+              ]
+            }
+          ],
+          "displayable": "false",
+          "merchandisable": "true",
+          "searchable": "true",
+          "sequence": "7.0",
+          "storeDisplay": "true",
+          "name": "Hipoteca Verde",
+          "facetable": "false",
+          "id": "11016",
+          "comparable": "false",
+          "swatchable": "false"
+        },
+        {
+          "identifier": "ACABADOS",
+          "attribute.natural": "[\"Mate\"]",
+          "usage": "Descriptive",
+          "values": [{ "value": "Mate" }],
+          "displayable": "true",
+          "merchandisable": "false",
+          "searchable": "true",
+          "sequence": "8.0",
+          "storeDisplay": "false",
+          "name": "Acabado",
+          "facetable": "true",
+          "id": "35586",
+          "comparable": "false",
+          "swatchable": "false"
+        },
+        {
+          "identifier": "PESO",
+          "attribute.natural": "[\"0.82 kg\"]",
+          "usage": "Descriptive",
+          "values": [{ "unitID": "KGM", "value": "0.82 kg" }],
+          "displayable": "true",
+          "merchandisable": "false",
+          "searchable": "true",
+          "sequence": "9.0",
+          "storeDisplay": "false",
+          "name": "Peso",
+          "facetable": "false",
+          "id": "10161",
+          "comparable": "false",
+          "swatchable": "false"
+        },
+        {
+          "identifier": "GARANTÍAPROVEEDOR",
+          "attribute.natural": "[]",
+          "usage": "Descriptive",
+          "values": [{ "value": "90 días en tienda" }],
+          "displayable": "true",
+          "merchandisable": "false",
+          "searchable": "false",
+          "sequence": "10.0",
+          "storeDisplay": "false",
+          "name": "Garantía proveedor",
+          "facetable": "false",
+          "id": "35623",
+          "comparable": "false",
+          "swatchable": "false"
+        },
+        {
+          "identifier": "MODELO",
+          "attribute.natural": "[\"Sedum estrella\"]",
+          "usage": "Descriptive",
+          "values": [{ "value": "Sedum estrella" }],
+          "displayable": "true",
+          "merchandisable": "false",
+          "searchable": "true",
+          "sequence": "12.0",
+          "storeDisplay": "false",
+          "name": "Modelo",
+          "facetable": "false",
+          "id": "10105",
+          "comparable": "false",
+          "swatchable": "false"
+        },
+        {
+          "identifier": "TIPO",
+          "attribute.natural": "[\"Follaje\"]",
+          "usage": "Descriptive",
+          "values": [{ "value": "Follaje" }],
+          "displayable": "true",
+          "merchandisable": "false",
+          "searchable": "true",
+          "sequence": "13.0",
+          "storeDisplay": "false",
+          "name": "Tipo",
+          "facetable": "true",
+          "id": "10219",
+          "comparable": "true",
+          "swatchable": "false"
+        },
+        {
+          "identifier": "NOMBRECOMUN",
+          "attribute.natural": "[]",
+          "usage": "Descriptive",
+          "values": [{ "value": "Sedum estrella" }],
+          "displayable": "true",
+          "merchandisable": "false",
+          "searchable": "false",
+          "sequence": "14.0",
+          "storeDisplay": "false",
+          "name": "Nombre común",
+          "facetable": "false",
+          "id": "10113",
+          "comparable": "false",
+          "swatchable": "false"
+        },
+        {
+          "identifier": "NOMBRECIENTIFICO",
+          "attribute.natural": "[]",
+          "usage": "Descriptive",
+          "values": [{ "value": "Sedum japonicum" }],
+          "displayable": "true",
+          "merchandisable": "false",
+          "searchable": "false",
+          "sequence": "15.0",
+          "storeDisplay": "false",
+          "name": "Nombre científico",
+          "facetable": "false",
+          "id": "10155",
+          "comparable": "false",
+          "swatchable": "false"
+        },
+        {
+          "identifier": "FAMILIABOTANICA",
+          "attribute.natural": "[]",
+          "usage": "Descriptive",
+          "values": [{ "value": "Crassulaceae" }],
+          "displayable": "true",
+          "merchandisable": "false",
+          "searchable": "false",
+          "sequence": "16.0",
+          "storeDisplay": "false",
+          "name": "Familia botánica",
+          "facetable": "false",
+          "id": "10127",
+          "comparable": "false",
+          "swatchable": "false"
+        },
+        {
+          "identifier": "CLASIFICACION",
+          "attribute.natural": "[\"Magnoliopsida\"]",
+          "usage": "Descriptive",
+          "values": [{ "value": "Magnoliopsida" }],
+          "displayable": "true",
+          "merchandisable": "false",
+          "searchable": "true",
+          "sequence": "17.0",
+          "storeDisplay": "true",
+          "name": "Clasificación",
+          "facetable": "true",
+          "id": "10021",
+          "comparable": "false",
+          "swatchable": "false"
+        },
+        {
+          "identifier": "LUZ",
+          "attribute.natural": "[\"Media sombra\"]",
+          "usage": "Descriptive",
+          "values": [{ "value": "Media sombra" }],
+          "displayable": "true",
+          "merchandisable": "false",
+          "searchable": "true",
+          "sequence": "18.0",
+          "storeDisplay": "false",
+          "name": "Luz",
+          "facetable": "true",
+          "id": "10141",
+          "comparable": "false",
+          "swatchable": "false"
+        },
+        {
+          "identifier": "TEMPERATURAMIN",
+          "attribute.natural": "[]",
+          "usage": "Descriptive",
+          "values": [{ "value": "10°c grados" }],
+          "displayable": "true",
+          "merchandisable": "false",
+          "searchable": "false",
+          "sequence": "19.0",
+          "storeDisplay": "false",
+          "name": "Temperatura min",
+          "facetable": "false",
+          "id": "10215",
+          "comparable": "false",
+          "swatchable": "false"
+        },
+        {
+          "identifier": "TEMPERATURAMAX",
+          "attribute.natural": "[]",
+          "usage": "Descriptive",
+          "values": [{ "value": "32°c grados" }],
+          "displayable": "true",
+          "merchandisable": "false",
+          "searchable": "false",
+          "sequence": "20.0",
+          "storeDisplay": "false",
+          "name": "Temperatura max",
+          "facetable": "false",
+          "id": "10180",
+          "comparable": "false",
+          "swatchable": "false"
+        },
+        {
+          "identifier": "RIEGO",
+          "attribute.natural": "[]",
+          "usage": "Descriptive",
+          "values": [{ "value": "3-4 veces por semana" }],
+          "displayable": "false",
+          "merchandisable": "false",
+          "searchable": "false",
+          "sequence": "21.0",
+          "storeDisplay": "false",
+          "name": "Riego",
+          "facetable": "false",
+          "id": "10208",
+          "comparable": "false",
+          "swatchable": "false"
+        },
+        {
+          "identifier": "PRESENTACION",
+          "attribute.natural": "[\"Maceta\"]",
+          "usage": "Descriptive",
+          "values": [{ "value": "Maceta" }],
+          "displayable": "true",
+          "merchandisable": "false",
+          "searchable": "true",
+          "sequence": "23.0",
+          "storeDisplay": "false",
+          "name": "Presentación",
+          "facetable": "true",
+          "id": "10167",
+          "comparable": "false",
+          "swatchable": "false"
+        },
+        {
+          "identifier": "NO.DEPIEZAS",
+          "attribute.natural": "[\"1\"]",
+          "usage": "Descriptive",
+          "values": [{ "value": "1" }],
+          "displayable": "true",
+          "merchandisable": "false",
+          "searchable": "true",
+          "sequence": "25.0",
+          "storeDisplay": "false",
+          "name": "No. de piezas",
+          "facetable": "false",
+          "id": "10153",
+          "comparable": "false",
+          "swatchable": "false"
+        },
+        {
+          "identifier": "ALTO",
+          "attribute.natural": "[\"17\"]",
+          "usage": "Descriptive",
+          "values": [{ "value": "17" }],
+          "displayable": "true",
+          "merchandisable": "false",
+          "searchable": "true",
+          "sequence": "26.0",
+          "storeDisplay": "false",
+          "name": "Alto",
+          "facetable": "false",
+          "id": "10046",
+          "comparable": "false",
+          "swatchable": "false"
+        },
+        {
+          "identifier": "CAPACIDAD/TAMAÑO",
+          "attribute.natural": "[\"6 pulgadas\"]",
+          "usage": "Descriptive",
+          "values": [{ "unitID": "INH", "value": "6 pulgadas" }],
+          "displayable": "true",
+          "merchandisable": "false",
+          "searchable": "true",
+          "sequence": "27.0",
+          "storeDisplay": "false",
+          "name": "Capacidad / Tamaño",
+          "facetable": "true",
+          "id": "10058",
+          "comparable": "true",
+          "swatchable": "false"
+        },
+        {
+          "identifier": "UBICACIONRECOMENDADA",
+          "attribute.natural": "[\"Exterior\"]",
+          "usage": "Descriptive",
+          "values": [{ "value": "Exterior" }],
+          "displayable": "true",
+          "merchandisable": "false",
+          "searchable": "true",
+          "sequence": "29.0",
+          "storeDisplay": "false",
+          "name": "Ubicación recomendada",
+          "facetable": "false",
+          "id": "225067",
+          "comparable": "false",
+          "swatchable": "false"
+        },
+        {
+          "identifier": "TIEMPODEVIDA",
+          "attribute.natural": "[]",
+          "usage": "Descriptive",
+          "values": [{ "value": "Perenne" }],
+          "displayable": "true",
+          "merchandisable": "false",
+          "searchable": "false",
+          "sequence": "34.0",
+          "storeDisplay": "false",
+          "name": "Tiempo de vida",
+          "facetable": "false",
+          "id": "137069",
+          "comparable": "false",
+          "swatchable": "false"
+        },
+        {
+          "identifier": "RESISTENTEAINTEMPERIE",
+          "attribute.natural": "[]",
+          "usage": "Descriptive",
+          "values": [{ "value": "Resistente" }],
+          "displayable": "true",
+          "merchandisable": "false",
+          "searchable": "false",
+          "sequence": "35.0",
+          "storeDisplay": "false",
+          "name": "Resistente a la intemperie",
+          "facetable": "false",
+          "id": "295567",
+          "comparable": "false",
+          "swatchable": "false"
+        }
+      ],
+      "type": "item",
+      "id": "662174"
+    }
+  ],
+  "facets": [
+    {
+      "name": "Disponibilidad en tienda física",
+      "entry": [
+        {
+          "count": 37,
+          "label": "Disponible en tienda",
+          "value": "store.only:8774_49067",
+          "extendedData": {
+            "fname": "storeOnly",
+            "zero_display": "false",
+            "propertyvalue": "storeOnly",
+            "allowMultipleValueSelection": "true",
+            "maximumValuesToDisplay": "-1",
+            "displaySequence": "0.0",
+            "name": "storeOnly",
+            "displayable": "true",
+            "allValuesReturned": "true",
+            "sortorder": "0",
+            "max_display": "-1",
+            "propertyId": "1000A"
+          }
+        },
+        {
+          "count": 1,
+          "label": "Catalogo Extendido",
+          "value": "extended.catalog:8774_49067#37",
+          "extendedData": {
+            "fname": "extendedCatalog",
+            "zero_display": "false",
+            "propertyvalue": "extendedCatalog",
+            "allowMultipleValueSelection": "true",
+            "maximumValuesToDisplay": "-1",
+            "displaySequence": "0.0",
+            "name": "extendedCatalog",
+            "displayable": "true",
+            "allValuesReturned": "true",
+            "sortorder": "0",
+            "max_display": "-1",
+            "propertyId": "1000B"
+          }
+        }
+      ],
+      "value": "facets.49067.value.raw%3A%228774%22",
+      "extendedData": {
+        "fname": "Disponibilidad en tienda física",
+        "propertyvalue": "disponibilidad en tienda física.raw",
+        "maximumValuesToDisplay": "30",
+        "displayable": "true",
+        "allValuesReturned": "true",
+        "zero_display": "false",
+        "allowMultipleValueSelection": "true",
+        "displaySequence": "0.0",
+        "name": "Disponibilidad en tienda física",
+        "sortorder": "0",
+        "max_display": "30",
+        "fdesc": "Disponibilidad en tienda física",
+        "propertyId": "disponibilidad en tienda física.raw"
+      }
+    },
+    {
+      "name": "Promociones",
+      "entry": [
+        {
+          "count": "26",
+          "label": "Compra especial",
+          "value": "facets.11014.value.raw%3A%228774%22",
+          "extendedData": { "uniqueId": "56555552" }
+        },
+        {
+          "count": "38",
+          "label": "Meses Sin Intereses",
+          "value": "facets.11018.value.raw%3A%228774%22",
+          "extendedData": { "uniqueId": "56555552" }
+        }
+      ],
+      "value": "facets.11018.value.raw%3A%228774%22",
+      "extendedData": {
+        "fname": "Promociones",
+        "propertyvalue": "promociones.raw",
+        "maximumValuesToDisplay": "30",
+        "displayable": "true",
+        "allValuesReturned": "true",
+        "zero_display": "false",
+        "allowMultipleValueSelection": "true",
+        "displaySequence": "0.0",
+        "name": "Promociones",
+        "sortorder": "0",
+        "max_display": "30",
+        "fdesc": "Grupo de promociones",
+        "propertyId": "promociones.raw"
+      }
+    },
+    {
+      "entry": [
+        {
+          "count": 16,
+          "label": "([1 TO 5])",
+          "value": "x_ratings.rating%3A%28%5B1+TO+5%5D%29",
+          "extendedData": {
+            "display": "false",
+            "uniqueId": "120951149711610511010311546114971161051101035840914932847932539341"
+          }
+        },
+        {
+          "count": 16,
+          "label": "([2 TO 5])",
+          "value": "x_ratings.rating%3A%28%5B2+TO+5%5D%29",
+          "extendedData": {
+            "display": "false",
+            "uniqueId": "120951149711610511010311546114971161051101035840915032847932539341"
+          }
+        },
+        {
+          "count": 16,
+          "label": "([3 TO 5])",
+          "value": "x_ratings.rating%3A%28%5B3+TO+5%5D%29",
+          "extendedData": {
+            "display": "false",
+            "uniqueId": "120951149711610511010311546114971161051101035840915132847932539341"
+          }
+        },
+        {
+          "count": 13,
+          "label": "([4 TO 5])",
+          "value": "x_ratings.rating%3A%28%5B4+TO+5%5D%29",
+          "extendedData": {
+            "display": "false",
+            "uniqueId": "120951149711610511010311546114971161051101035840915232847932539341"
+          }
+        }
+      ],
+      "value": "x_ratings.rating",
+      "name": "Calificación"
+    },
+    {
+      "entry": [
+        {
+          "count": 32,
+          "label": "({* TO 199])",
+          "value": "price_mxn%3A%28%7B*+TO+199%5D%29",
+          "extendedData": {
+            "uniqueId": "1121141059910195109120110584012342328479324957579341"
+          }
+        },
+        {
+          "count": 3,
+          "label": "({199 TO 398])",
+          "value": "price_mxn%3A%28%7B199+TO+398%5D%29",
+          "extendedData": {
+            "uniqueId": "11211410599101951091201105840123495757328479325157569341"
+          }
+        },
+        {
+          "count": 0,
+          "label": "({398 TO 597])",
+          "value": "price_mxn%3A%28%7B398+TO+597%5D%29",
+          "extendedData": {
+            "uniqueId": "11211410599101951091201105840123515756328479325357559341"
+          }
+        },
+        {
+          "count": 1,
+          "label": "({597 TO 796])",
+          "value": "price_mxn%3A%28%7B597+TO+796%5D%29",
+          "extendedData": {
+            "uniqueId": "11211410599101951091201105840123535755328479325557549341"
+          }
+        },
+        {
+          "count": 0,
+          "label": "({796 TO 995])",
+          "value": "price_mxn%3A%28%7B796+TO+995%5D%29",
+          "extendedData": {
+            "uniqueId": "11211410599101951091201105840123555754328479325757539341"
+          }
+        },
+        {
+          "count": 2,
+          "label": "({995 TO * ])",
+          "value": "price_mxn%3A%28%7B995+TO+*+%5D%29",
+          "extendedData": {
+            "uniqueId": "112114105991019510912011058401235757533284793242329341"
+          }
+        }
+      ],
+      "value": "price_mxn",
+      "name": "OfferPrice_mxn"
+    },
+    {
+      "value": "facets.10141.value.key",
+      "name": "Luz",
+      "entry": [
+        {
+          "label": "Media sombra",
+          "value": "facets.10141.value.key%3A%22Media+sombra%22",
+          "count": "13",
+          "key": "Media sombra",
+          "extendedData": { "uniqueId": "7710110010597321151111099811497" }
+        },
+        {
+          "label": "Sol",
+          "value": "facets.10141.value.key%3A%22Sol%22",
+          "count": "6",
+          "key": "Sol",
+          "extendedData": { "uniqueId": "83111108" }
+        },
+        {
+          "label": "Sol directo",
+          "value": "facets.10141.value.key%3A%22Sol+directo%22",
+          "count": "3",
+          "key": "Sol directo",
+          "extendedData": { "uniqueId": "831111083210010511410199116111" }
+        },
+        {
+          "label": "Sombra",
+          "value": "facets.10141.value.key%3A%22Sombra%22",
+          "count": "1",
+          "key": "Sombra",
+          "extendedData": { "uniqueId": "831111099811497" }
+        },
+        {
+          "label": "Media sombra y sombra",
+          "value": "facets.10141.value.key%3A%22Media+sombra+y+sombra%22",
+          "count": "1",
+          "key": "Media sombra y sombra",
+          "extendedData": {
+            "uniqueId": "771011001059732115111109981149732121321151111099811497"
+          }
+        },
+        {
+          "label": "Sombra y media sombra",
+          "value": "facets.10141.value.key%3A%22Sombra+y+media+sombra%22",
+          "count": "1",
+          "key": "Sombra y media sombra",
+          "extendedData": {
+            "uniqueId": "831111099811497321213210910110010597321151111099811497"
+          }
+        }
+      ],
+      "extendedData": {
+        "fname": "Luz",
+        "zero_display": "false",
+        "propertyvalue": "LUZ",
+        "allowMultipleValueSelection": "true",
+        "maximumValuesToDisplay": "-1",
+        "displaySequence": "2.0",
+        "name": "Luz",
+        "displayable": "true",
+        "allValuesReturned": "true",
+        "sortorder": "0",
+        "max_display": "-1",
+        "propertyId": "10141"
+      }
+    },
+    {
+      "value": "facets.10219.value.key",
+      "name": "Tipo",
+      "entry": [
+        {
+          "label": "Natural",
+          "value": "facets.10219.value.key%3A%22Natural%22",
+          "count": "14",
+          "key": "Natural",
+          "extendedData": { "uniqueId": "789711611711497108" }
+        },
+        {
+          "label": "Follaje",
+          "value": "facets.10219.value.key%3A%22Follaje%22",
+          "count": "9",
+          "key": "Follaje",
+          "extendedData": { "uniqueId": "7011110810897106101" }
+        },
+        {
+          "label": "Aromática/ medicinal",
+          "value": "facets.10219.value.key%3A%22Arom%C3%A1tica%2F+medicinal%22",
+          "count": "1",
+          "key": "Aromática/ medicinal",
+          "extendedData": {
+            "uniqueId": "65114111109225116105999747321091011001059910511097108"
+          }
+        },
+        {
+          "label": "Perene",
+          "value": "facets.10219.value.key%3A%22Perene%22",
+          "count": "1",
+          "key": "Perene",
+          "extendedData": { "uniqueId": "80101114101110101" }
+        },
+        {
+          "label": "Cactus/suculenta",
+          "value": "facets.10219.value.key%3A%22Cactus%2Fsuculenta%22",
+          "count": "1",
+          "key": "Cactus/suculenta",
+          "extendedData": {
+            "uniqueId": "679799116117115471151179911710810111011697"
+          }
+        }
+      ],
+      "extendedData": {
+        "fname": "Tipo",
+        "zero_display": "false",
+        "propertyvalue": "TIPO",
+        "allowMultipleValueSelection": "true",
+        "maximumValuesToDisplay": "-1",
+        "displaySequence": "3.0",
+        "name": "Tipo",
+        "displayable": "true",
+        "allValuesReturned": "true",
+        "sortorder": "0",
+        "max_display": "-1",
+        "propertyId": "10219"
+      }
+    },
+    {
+      "value": "facets.10065.value.key",
+      "name": "Color",
+      "entry": [
+        {
+          "label": "Verde",
+          "value": "facets.10065.value.key%3A%22Verde%22",
+          "count": "25",
+          "key": "Verde",
+          "extendedData": { "uniqueId": "86101114100101" }
+        },
+        {
+          "label": "Varios colores",
+          "value": "facets.10065.value.key%3A%22Varios+colores%22",
+          "count": "2",
+          "key": "Varios colores",
+          "extendedData": {
+            "uniqueId": "86971141051111153299111108111114101115"
+          }
+        },
+        {
+          "label": "Multicolor",
+          "value": "facets.10065.value.key%3A%22Multicolor%22",
+          "count": "2",
+          "key": "Multicolor",
+          "extendedData": { "uniqueId": "7711710811610599111108111114" }
+        },
+        {
+          "label": "Colores",
+          "value": "facets.10065.value.key%3A%22Colores%22",
+          "count": "1",
+          "key": "Colores",
+          "extendedData": { "uniqueId": "67111108111114101115" }
+        },
+        {
+          "label": "Rojo",
+          "value": "facets.10065.value.key%3A%22Rojo%22",
+          "count": "1",
+          "key": "Rojo",
+          "extendedData": { "uniqueId": "82111106111" }
+        },
+        {
+          "label": "Verde con amarillo.",
+          "value": "facets.10065.value.key%3A%22Verde+con+amarillo.%22",
+          "count": "1",
+          "key": "Verde con amarillo.",
+          "extendedData": {
+            "uniqueId": "86101114100101329911111032971099711410510810811146"
+          }
+        },
+        {
+          "label": "Chocolate",
+          "value": "facets.10065.value.key%3A%22Chocolate%22",
+          "count": "1",
+          "key": "Chocolate",
+          "extendedData": { "uniqueId": "671041119911110897116101" }
+        },
+        {
+          "label": "Morado",
+          "value": "facets.10065.value.key%3A%22Morado%22",
+          "count": "1",
+          "key": "Morado",
+          "extendedData": { "uniqueId": "7711111497100111" }
+        },
+        {
+          "label": "-",
+          "value": "facets.10065.value.key%3A%22-%22",
+          "count": "1",
+          "key": "-",
+          "extendedData": { "uniqueId": "45" }
+        }
+      ],
+      "extendedData": {
+        "fname": "Color",
+        "zero_display": "false",
+        "propertyvalue": "COLOR",
+        "allowMultipleValueSelection": "true",
+        "maximumValuesToDisplay": "-1",
+        "displaySequence": "5.0",
+        "name": "Color",
+        "displayable": "true",
+        "allValuesReturned": "true",
+        "sortorder": "0",
+        "max_display": "-1",
+        "propertyId": "10065"
+      }
+    },
+    {
+      "value": "facets.10058.value.key",
+      "name": "Capacidad / Tamaño",
+      "entry": [
+        {
+          "label": "10 pulgadas",
+          "value": "facets.10058.value.key%3A%2210+pulgadas%22",
+          "count": "2",
+          "key": "10 pulgadas",
+          "extendedData": { "uniqueId": "4948321121171081039710097115" }
+        },
+        {
+          "label": "10 x 12",
+          "value": "facets.10058.value.key%3A%2210+x+12%22",
+          "count": "1",
+          "key": "10 x 12",
+          "extendedData": { "uniqueId": "494832120324950" }
+        },
+        {
+          "label": "106 x 12.3 cm",
+          "value": "facets.10058.value.key%3A%22106+x+12.3+cm%22",
+          "count": "1",
+          "key": "106 x 12.3 cm",
+          "extendedData": { "uniqueId": "4948543212032495046513299109" }
+        },
+        {
+          "label": "25 x 19 cm",
+          "value": "facets.10058.value.key%3A%2225+x+19+cm%22",
+          "count": "1",
+          "key": "25 x 19 cm",
+          "extendedData": { "uniqueId": "5053321203249573299109" }
+        },
+        {
+          "label": "28 x 23 cm",
+          "value": "facets.10058.value.key%3A%2228+x+23+cm%22",
+          "count": "1",
+          "key": "28 x 23 cm",
+          "extendedData": { "uniqueId": "5056321203250513299109" }
+        },
+        {
+          "label": "3 pulgadas",
+          "value": "facets.10058.value.key%3A%223+pulgadas%22",
+          "count": "1",
+          "key": "3 pulgadas",
+          "extendedData": { "uniqueId": "51321121171081039710097115" }
+        },
+        {
+          "label": "35 x 14.8 cm",
+          "value": "facets.10058.value.key%3A%2235+x+14.8+cm%22",
+          "count": "1",
+          "key": "35 x 14.8 cm",
+          "extendedData": { "uniqueId": "51533212032495246563299109" }
+        },
+        {
+          "label": "4 pulgadas",
+          "value": "facets.10058.value.key%3A%224+pulgadas%22",
+          "count": "2",
+          "key": "4 pulgadas",
+          "extendedData": { "uniqueId": "52321121171081039710097115" }
+        },
+        {
+          "label": "45 x 32 cm",
+          "value": "facets.10058.value.key%3A%2245+x+32+cm%22",
+          "count": "1",
+          "key": "45 x 32 cm",
+          "extendedData": { "uniqueId": "5253321203251503299109" }
+        },
+        {
+          "label": "49.8 x 23.7 cm",
+          "value": "facets.10058.value.key%3A%2249.8+x+23.7+cm%22",
+          "count": "1",
+          "key": "49.8 x 23.7 cm",
+          "extendedData": { "uniqueId": "525746563212032505146553299109" }
+        },
+        {
+          "label": "5 pulgadas",
+          "value": "facets.10058.value.key%3A%225+pulgadas%22",
+          "count": "2",
+          "key": "5 pulgadas",
+          "extendedData": { "uniqueId": "53321121171081039710097115" }
+        },
+        {
+          "label": "6 pulgadas",
+          "value": "facets.10058.value.key%3A%226+pulgadas%22",
+          "count": "9",
+          "key": "6 pulgadas",
+          "extendedData": { "uniqueId": "54321121171081039710097115" }
+        },
+        {
+          "label": "7 pulgadas",
+          "value": "facets.10058.value.key%3A%227+pulgadas%22",
+          "count": "1",
+          "key": "7 pulgadas",
+          "extendedData": { "uniqueId": "55321121171081039710097115" }
+        },
+        {
+          "label": "7.5 pulgadas",
+          "value": "facets.10058.value.key%3A%227.5+pulgadas%22",
+          "count": "1",
+          "key": "7.5 pulgadas",
+          "extendedData": { "uniqueId": "554653321121171081039710097115" }
+        }
+      ],
+      "extendedData": {
+        "fname": "Capacidad / Tamaño",
+        "zero_display": "false",
+        "propertyvalue": "CAPACIDAD/TAMAÑO",
+        "allowMultipleValueSelection": "true",
+        "maximumValuesToDisplay": "-1",
+        "displaySequence": "6.0",
+        "name": "Capacidad / Tamaño",
+        "displayable": "true",
+        "allValuesReturned": "true",
+        "sortorder": "1",
+        "max_display": "-1",
+        "propertyId": "10058"
+      }
+    },
+    {
+      "value": "facets.10167.value.key",
+      "name": "Presentación",
+      "entry": [
+        {
+          "label": "Maceta",
+          "value": "facets.10167.value.key%3A%22Maceta%22",
+          "count": "14",
+          "key": "Maceta",
+          "extendedData": { "uniqueId": "77979910111697" }
+        },
+        {
+          "label": "Maceta colgante",
+          "value": "facets.10167.value.key%3A%22Maceta+colgante%22",
+          "count": "2",
+          "key": "Maceta colgante",
+          "extendedData": {
+            "uniqueId": "77979910111697329911110810397110116101"
+          }
+        },
+        {
+          "label": "En bolsa",
+          "value": "facets.10167.value.key%3A%22En+bolsa%22",
+          "count": "1",
+          "key": "En bolsa",
+          "extendedData": { "uniqueId": "69110329811110811597" }
+        },
+        {
+          "label": "Bolsa",
+          "value": "facets.10167.value.key%3A%22Bolsa%22",
+          "count": "1",
+          "key": "Bolsa",
+          "extendedData": { "uniqueId": "6611110811597" }
+        },
+        {
+          "label": "Maceta 10.16 cm",
+          "value": "facets.10167.value.key%3A%22Maceta+10.16+cm%22",
+          "count": "1",
+          "key": "Maceta 10.16 cm",
+          "extendedData": { "uniqueId": "779799101116973249484649543299109" }
+        }
+      ],
+      "extendedData": {
+        "fname": "Presentación",
+        "zero_display": "false",
+        "propertyvalue": "PRESENTACION",
+        "allowMultipleValueSelection": "true",
+        "maximumValuesToDisplay": "-1",
+        "displaySequence": "8.0",
+        "name": "Presentación",
+        "displayable": "true",
+        "allValuesReturned": "true",
+        "sortorder": "0",
+        "max_display": "-1",
+        "propertyId": "10167"
+      }
+    },
+    {
+      "entry": [
+        {
+          "count": 0,
+          "label": "Incluir no disponibles",
+          "value": "unavailable%3A1",
+          "extendedData": { "uniqueId": "117110971189710510897981081015849" }
+        }
+      ],
+      "value": "include_non_available",
+      "name": "Disponibilidad"
+    }
+  ],
+  "next": "/search/resources/api/v2/products?storeId=10351&categoryId=124510&limit=28&offset=28",
+  "previous": "/search/resources/api/v2/products?storeId=10351&categoryId=124510&limit=28&offset=0",
+  "total": 38
+}
