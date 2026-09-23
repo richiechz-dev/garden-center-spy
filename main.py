@@ -6,6 +6,7 @@ from requests.exceptions import ConnectionError, HTTPError, Timeout
 from sqlalchemy.exc import SQLAlchemyError
 
 from extractors.home_depot import HomeDepot
+from extractors.ikea import Ikea
 from load.load import load_products
 
 load_dotenv()
@@ -17,9 +18,18 @@ def main():
         print("Error: HOME_DEPOT_API_URL no está configurada en .env")
         sys.exit(1)
 
+    ikea_url = os.getenv("IKEA_API_URL")
+    ikea_category = os.getenv("IKEA_CATEGORY")
+    if not ikea_url or not ikea_category:
+        print("Error: IKEA_API_URL / IKEA_CATEGORY no están configuradas en .env")
+        sys.exit(1)
+
     try:
         home_depot = HomeDepot(api_url)
         products = home_depot.run()
+
+        ikea = Ikea(ikea_url, category=ikea_category)
+        products += ikea.run()
     except (ConnectionError, Timeout) as e:
         print(f"Error de conexión con la API: {e}")
         sys.exit(1)

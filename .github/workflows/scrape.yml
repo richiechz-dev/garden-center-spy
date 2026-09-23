@@ -11,6 +11,8 @@ jobs:
     env:
       DATABASE_URL: ${{ secrets.DATABASE_URL }}
       HOME_DEPOT_API_URL: ${{ secrets.HOME_DEPOT_API_URL }}
+      IKEA_API_URL: ${{ secrets.IKEA_API_URL }}
+      IKEA_CATEGORY: ${{ secrets.IKEA_CATEGORY }}
 
     steps:
       - name: Checkout repo
