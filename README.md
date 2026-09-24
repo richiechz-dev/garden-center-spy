@@ -115,6 +115,16 @@ Crea las tablas de la BD (solo primera vez):
 uv run python -m load.connection
 ```
 
+Si **ya tenías** la BD creada con el schema anterior, `create_all` no altera tablas existentes; corre una vez los `ALTER` para agregar las columnas nuevas y el constraint compuesto:
+
+```sql
+ALTER TABLE products DROP CONSTRAINT products_sku_key;
+ALTER TABLE products ADD CONSTRAINT products_sku_store_key UNIQUE (sku, store);
+ALTER TABLE products ADD COLUMN scientific_name VARCHAR;
+ALTER TABLE products ADD COLUMN category VARCHAR;
+ALTER TABLE products ADD COLUMN measurement VARCHAR;
+```
+
 ## Uso
 
 ```bash
@@ -128,7 +138,7 @@ uv run main.py
 - [x] Normalizar estructura de salida entre extractores
 - [x] Persistencia en Postgres
 - [x] Automatización con GitHub Actions (cron diario)
-- [x] Soporte para más tiendas (IKEA)
+- [x] Soporte para más tiendas (IKEA por ejemplo)
 - [ ] API con FastAPI
 
 ## Nota sobre la fuente de datos

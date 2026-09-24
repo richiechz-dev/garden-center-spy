@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from sqlalchemy import ForeignKey
+from sqlalchemy import ForeignKey, UniqueConstraint
 from sqlalchemy.orm import Mapped, declarative_base, mapped_column, relationship
 
 Base = declarative_base()
@@ -8,10 +8,17 @@ Base = declarative_base()
 
 class ProductModel(Base):
     __tablename__ = "products"
+    __table_args__ = (
+        UniqueConstraint("sku", "store", name="products_sku_store_key"),
+    )
+
     id: Mapped[int] = mapped_column(primary_key=True, index=True)
-    sku: Mapped[str] = mapped_column(unique=True)
-    name: Mapped[str]
+    sku: Mapped[str]
     store: Mapped[str]
+    name: Mapped[str]
+    scientific_name: Mapped[str | None]
+    category: Mapped[str | None]
+    measurement: Mapped[str | None]
     description: Mapped[str | None]
     image_url: Mapped[str | None]
     product_url: Mapped[str | None]

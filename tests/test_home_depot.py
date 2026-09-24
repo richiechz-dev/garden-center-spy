@@ -109,3 +109,55 @@ def test_parse_oferta_tipo_string():
     resultado = extractor.parse(raw_data)
 
     assert resultado[0].price == 200.0
+
+
+def test_parse_mapea_campos_normalizados():
+    # Verifica el mapeo de scientific_name, category y measurement desde attributes y breadcrumb
+    extractor = HomeDepot("url_false")
+    raw_data = {
+        "breadcrumb": [
+            {"label": "Jardín"},
+            {"label": "Plantas"},
+            {"label": "Plantas de follaje"},
+        ],
+        "contents": [
+            {
+                "name": "SEDUM ESTRELLA",
+                "partNumber": "136837",
+                "price": [{"usage": "Offer", "value": "62.0"}],
+                "attributes": [
+                    {"identifier": "NOMBRECIENTIFICO", "values": [{"value": "Sedum japonicum"}]},
+                    {"identifier": "CAPACIDAD/TAMAÑO", "values": [{"value": "6 pulgadas"}]},
+                    {"identifier": "DIÁMETRO", "values": [{"value": "16 cm"}]},
+                ],
+            }
+        ],
+    }
+    resultado = extractor.parse(raw_data)
+
+    assert resultado[0].scientific_name == "Sedum japonicum"
+    assert resultado[0].category == "Plantas de follaje"
+    assert resultado[0].measurement == "6 pulgadas"
+
+
+def test_parse_campos_normalizados_fallback_attributes():
+    # Verifica que sin breadcrumb, la categoría cae al atributo TIPO y la medida al siguiente atributo
+    extractor = HomeDepot("url_false")
+    raw_data = {
+        "contents": [
+            {
+                "name": "Planta",
+                "partNumber": "X-1",
+                "price": [{"usage": "Offer", "value": "10.0"}],
+                "attributes": [
+                    {"identifier": "TIPO", "values": [{"value": "Follaje"}]},
+                    {"identifier": "DIÁMETRO", "values": [{"value": "16 cm"}]},
+                ],
+            }
+        ]
+    }
+    resultado = extractor.parse(raw_data)
+
+    assert resultado[0].category == "Follaje"
+    assert resultado[0].measurement == "16 cm"
+    assert resultado[0].scientific_name is None

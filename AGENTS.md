@@ -32,7 +32,7 @@ extractors/  →  models.py  →  load/  →  Postgres
   - `home_depot.py`: GET con paginación por query params (`offset`). Precio = `price[]` con `usage == "Offer"`.
   - `ikea.py`: **POST**; la paginación vive en el **body** (`window.offset`/`window.size`), no en la URL. Precio = `salesPrice.numeral`; categoría en `searchParameters.input` (env `IKEA_CATEGORY`). Devuelve `results[*].items` localizados en el body (metadata refleja totales).
 - **Product** (`models.py`): modelo Pydantic que valida y transporta datos entre capas.
-- **DB models** (`load/db_models.py`): relación uno-a-muchos (`ProductModel` → `PriceHistoryModel`). El precio solo vive en `price_history`, no en `products`.
+- **DB models** (`load/db_models.py`): relación uno-a-muchos (`ProductModel` → `PriceHistoryModel`). El precio solo vive en `price_history`, no en `products`. `ProductModel` tiene campos normalizados (`scientific_name`, `category`, `measurement`) y constraint `UNIQUE(sku, store)` — el SKU solo es único por tienda, no global.
 - **Load** (`load/load.py`): upsert por SKU + agrega historial de precios.
 
 ## CI

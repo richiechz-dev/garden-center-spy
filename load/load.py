@@ -11,8 +11,11 @@ def load_products(products_list: list[Product]):
     try:
         with get_session() as session:  # Abre una sesion
             for product in products_list:
-                # Busca si el producto ya existe por SKU
-                stmt = select(ProductModel).where(ProductModel.sku == product.sku)
+                # Busca si el producto ya existe por SKU y tienda
+                stmt = select(ProductModel).where(
+                    ProductModel.sku == product.sku,
+                    ProductModel.store == product.store,
+                )
                 existing_product = session.execute(stmt).scalar_one_or_none()
 
                 if existing_product is None:
@@ -21,6 +24,9 @@ def load_products(products_list: list[Product]):
                         sku=product.sku,
                         name=product.name,
                         store=product.store,
+                        scientific_name=product.scientific_name,
+                        category=product.category,
+                        measurement=product.measurement,
                         description=product.description,
                         image_url=product.image_url,
                         product_url=product.product_url,
