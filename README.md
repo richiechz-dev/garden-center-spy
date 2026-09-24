@@ -2,9 +2,13 @@
 
 [![Python 3.14+](https://img.shields.io/badge/python-3.14+-3776AB.svg?logo=python&logoColor=white)](https://www.python.org/downloads/)
 [![PostgreSQL](https://img.shields.io/badge/postgreSQL-16-4169E1.svg?logo=postgresql&logoColor=white)](https://www.postgresql.org/)
-![Run Status](https://github.com/richiechz-dev/vivero_spy/actions/workflows/scrape.yml/badge.svg)
+![Run Status](https://github.com/richiechz-dev/garden-center-spy/actions/workflows/scrape.yml/badge.svg)
 
-Scraper en Python para extraer precios de plantas consumiendo APIs JSON públicas de tiendas (no scraping HTML). Pipeline ETL con persistencia en PostgreSQL.
+Scraper en Python para extraer precios de plantas consumiendo endpoints JSON internos de tiendas (descubiertos vía DevTools, no scraping HTML). Pipeline ETL con persistencia en PostgreSQL.
+
+## Objetivo
+
+Obtener datos de precios de plantas para usarlos como base de un pipeline (extracción y posterior carga a base de datos).
 
 ## Tech Stack
 
@@ -25,8 +29,8 @@ Home Depot / IKEA API  →  Extractor  →  Pydantic Model  →  SQLAlchemy  →
 
 1. **Extract**: consume endpoints JSON y extrae productos con precio válido
    (Home Depot: precio `Offer`; IKEA: `salesPrice.numeral`)
-2. **Transform**: valida y modela cada producto con Pydantic
-3. **Load**: upsert por SKU en PostgreSQL con historial de precios
+2. **Transform**: valida y modela cada producto con Pydantic, mapeando campos normalizados (`scientific_name`, `category`, `measurement`)
+3. **Load**: upsert por SKU + store en PostgreSQL con historial de precios
 
 ## Automated Pipeline
 
@@ -42,10 +46,11 @@ de PostgreSQL en [Neon](https://neon.com).
 ```
 GitHub Actions (cron) → Extract/Transform/Load → Neon Postgres (persistente)
 ```
+
 ## Project Structure
 
 ```
-vivero_spy/
+garden-center-spy/
 ├── extractors/
 │   ├── base.py          # Clase abstracta Extractor
 │   ├── home_depot.py    # Extractor para Home Depot MX
@@ -60,10 +65,6 @@ vivero_spy/
 ├── docker-compose.yaml  # Postgres 16
 └── .env.example         # Variables de entorno
 ```
-
-## Objetivo
-
-Obtener datos de precios de plantas para usarlos como base de un pipeline (extracción y posterior carga a base de datos).
 
 ## Alcance actual
 
@@ -89,7 +90,7 @@ IKEA_CATEGORY=700527  # Plantas con flores
 
 - Python 3.14+
 - [uv](https://docs.astral.sh/uv/)
-  - Docker (para Postgres en local)
+- Docker (para Postgres en local)
 
 ## Instalación
 
@@ -115,20 +116,28 @@ Crea las tablas de la BD (solo primera vez):
 uv run python -m load.connection
 ```
 
-Si **ya tenías** la BD creada con el schema anterior, `create_all` no altera tablas existentes; corre una vez los `ALTER` para agregar las columnas nuevas y el constraint compuesto:
+Si **ya tenías** la BD creada con el schema anterior, `create_all` no altera tablas existentes; corre una vez los `ALTER` para agregar las columnas nuevas y el constraint compuesto. Verifica antes el nombre real de la constraint con `\d products`; si algo falla a mitad de bloque, ejecuta `ROLLBACK;` y vuelve a empezar:
 
 ```sql
+BEGIN;
 ALTER TABLE products DROP CONSTRAINT products_sku_key;
 ALTER TABLE products ADD CONSTRAINT products_sku_store_key UNIQUE (sku, store);
 ALTER TABLE products ADD COLUMN scientific_name VARCHAR;
 ALTER TABLE products ADD COLUMN category VARCHAR;
 ALTER TABLE products ADD COLUMN measurement VARCHAR;
+COMMIT;
 ```
 
 ## Uso
 
 ```bash
 uv run main.py
+```
+
+## Tests
+
+```bash
+uv run pytest
 ```
 
 ## Roadmap
@@ -138,7 +147,7 @@ uv run main.py
 - [x] Normalizar estructura de salida entre extractores
 - [x] Persistencia en Postgres
 - [x] Automatización con GitHub Actions (cron diario)
-- [x] Soporte para más tiendas (IKEA por ejemplo)
+- [x] Soporte para más tiendas en el futuro (IKEA completo)
 - [ ] API con FastAPI
 
 ## Nota sobre la fuente de datos
