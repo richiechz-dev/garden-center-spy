@@ -95,21 +95,20 @@ class Ikea(Extractor):
             if price is None:
                 continue
 
-            type_name = product.get("typeName")
-            measurement = product.get("itemMeasureReferenceText")
-            if type_name and measurement:
-                description = f"{type_name}, {measurement}"
-            else:
-                description = type_name or measurement
+            name = product.get("name")
+            if not name:
+                continue
 
             products.append(
                 Product(
-                    name=product.get("name", "Desconocido"),
+                    name=name,
                     sku=product.get("itemNo") or product.get("id", "Desconocido"),
                     price=float(price),
                     currency=sales_price.get("currencyCode", "MXN"),
                     store="IKEA",
-                    description=description,
+                    scientific_name=name,
+                    category=product.get("typeName"),
+                    measurement=product.get("itemMeasureReferenceText"),
                     image_url=product.get("mainImageUrl"),
                     product_url=product.get("pipUrl"),
                     scraped_at=datetime.now(UTC),

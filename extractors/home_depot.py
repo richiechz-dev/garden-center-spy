@@ -28,6 +28,7 @@ class HomeDepot(Extractor):
 
         all_contents.extend(data.get("contents", []))
         total = data.get("total", 0)
+        breadcrumb = data.get("breadCrumbTrailEntryView", [])
         offset += limit
 
         # Páginas siguientes, mientras falten productos
@@ -46,12 +47,21 @@ class HomeDepot(Extractor):
             sku = item.get("partNumber")
             unique_contents[sku] = item
 
-        return {"contents": list(unique_contents.values())}
+        return {
+            "contents": list(unique_contents.values()),
+            "breadcrumb": breadcrumb,
+        }
 
     @override
     def parse(self, raw_data: dict[str, Any]) -> list[Product]:
         products_raw = raw_data.get("contents", [])
+        breadcrumb = raw_data.get("breadcrumb", [])
         products = []
+
+        # La categoría viene en el breadcrumb de nivel superior de la respuesta
+        category = None
+        if breadcrumb:
+            category = breadcrumb[-1].get("label")
 
         for item in products_raw:
             offer_price = None
@@ -72,6 +82,11 @@ class HomeDepot(Extractor):
                 product_url = None
                 image_url = None
 
+            attrs = {
+                attr.get("identifier"): (attr.get("values") or [{}])[0].get("value")
+                for attr in item.get("attributes", [])
+            }
+
             product = Product(
                 name=item.get("name", "Desconocido"),
                 sku=item.get("partNumber", "Desconocido"),
@@ -80,6 +95,13 @@ class HomeDepot(Extractor):
                 description=item.get("shortDescription", "Sin Descripción"),
                 image_url=image_url,
                 product_url=product_url,
+                scientific_name=attrs.get("NOMBRECIENTIFICO"),
+                category=category or attrs.get("TIPO"),
+                measurement=(
+                    attrs.get("CAPACIDAD/TAMAÑO")
+                    or attrs.get("DIÁMETRO")
+                    or attrs.get("ALTO")
+                ),
                 scraped_at=datetime.now(UTC),
             )
 

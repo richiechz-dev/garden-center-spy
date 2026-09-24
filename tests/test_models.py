@@ -32,6 +32,9 @@ def test_optional_fields_default_to_none():
     assert product.description is None
     assert product.image_url is None
     assert product.product_url is None
+    assert product.scientific_name is None
+    assert product.category is None
+    assert product.measurement is None
 
 
 def test_missing_required_fields_raises_validation_error():

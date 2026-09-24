@@ -101,22 +101,25 @@ def test_parse_sin_pip_url_ni_imagen():
     assert resultado[0].image_url is None
 
 
-def test_parse_description_compuesta():
-    # Verifica que la descripción se compone de typeName + medida
+def test_parse_mapea_campos_normalizados():
+    # Verifica el mapeo de scientific_name, category y measurement
     extractor = Ikea("url_false", "10779")
     raw_data = {
         "items": [
             _item(
                 {
-                    "name": "EPIPREMNUM",
+                    "name": "MONSTERA DELICIOSA",
                     "typeName": "Planta en maceta",
-                    "itemMeasureReferenceText": "15 cm",
-                    "itemNo": "300",
-                    "salesPrice": {"numeral": 49.0},
+                    "itemMeasureReferenceText": "25 cm",
+                    "itemNo": "50547130",
+                    "salesPrice": {"currencyCode": "MXN", "numeral": 299.0},
                 }
             )
         ]
     }
     resultado = extractor.parse(raw_data)
 
-    assert resultado[0].description == "Planta en maceta, 15 cm"
+    assert resultado[0].scientific_name == "MONSTERA DELICIOSA"
+    assert resultado[0].category == "Planta en maceta"
+    assert resultado[0].measurement == "25 cm"
+    assert resultado[0].description is None
