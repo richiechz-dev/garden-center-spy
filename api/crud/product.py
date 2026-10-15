@@ -1,7 +1,7 @@
 from sqlalchemy import select
 from sqlalchemy.orm import Session, selectinload
 
-from load.db_models import ProductModel
+from load.db_models import PriceHistoryModel, ProductModel
 
 
 def get_products_with_latest_price(db: Session, skip: int = 0, limit: int = 100):
@@ -47,3 +47,21 @@ def get_products_with_latest_price(db: Session, skip: int = 0, limit: int = 100)
             }
         )
     return result
+
+
+def get_product(db: Session, product_id: int):
+    """Busca un producto por id. Devuelve None si no existe.
+
+    db.get() es el atajo de SQLAlchemy para buscar por primary key.
+    """
+    return db.get(ProductModel, product_id)
+
+
+def get_price_history(db: Session, product_id: int):
+    """Historial de precios de un producto, del más viejo al más nuevo."""
+    stmt = (
+        select(PriceHistoryModel)
+        .where(PriceHistoryModel.product_id == product_id)
+        .order_by(PriceHistoryModel.scraped_at.asc())
+    )
+    return db.scalars(stmt).all()
