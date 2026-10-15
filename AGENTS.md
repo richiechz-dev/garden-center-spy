@@ -28,6 +28,13 @@ extractors/  →  models.py  →  load/  →  Postgres
   (fetch+parse)   (Pydantic)   (SQLAlchemy)
 ```
 
+## API structure
+`api/` is layered: router -> crud -> database, schemas shape the response.
+- `routers/`: HTTP only, no SQL
+- `crud/`: SQLAlchemy 2.0 queries (`select()` + `db.scalars()`), no HTTP
+- `schemas/`: Pydantic v2 (`from_attributes=True`)
+- `dependencies.py`: `get_db()` with `yield`/`finally`
+
 - **Extractor** (`extractors/base.py`): clase abstracta con contrato `fetch()` + `parse()`. Cada tienda hereda de acá.
   - `home_depot.py`: GET con paginación por query params (`offset`). Precio = `price[]` con `usage == "Offer"`.
   - `ikea.py`: **POST**; la paginación vive en el **body** (`window.offset`/`window.size`), no en la URL. Precio = `salesPrice.numeral`; categoría en `searchParameters.input` (env `IKEA_CATEGORY`). Devuelve `results[*].items` localizados en el body (metadata refleja totales).
@@ -42,11 +49,17 @@ extractors/  →  models.py  →  load/  →  Postgres
 - Env vars `DATABASE_URL`, `HOME_DEPOT_API_URL`, `IKEA_API_URL` y `IKEA_CATEGORY` vienen de GitHub Secrets (Neon en prod).
 - Ejemplo: `IKEA_CATEGORY=10779` es "Plantas naturales"; ver README para más categorías.
 
-## Convenciones
+## Convenciones o Reglas
 
 - Comentarios en español, código en inglés
 - No hay linter/formatter/typechecker — seguir el estilo existente
 - No confundir `models.py` (Pydantic) con `load/db_models.py` (SQLAlchemy)
+- Nunca leer, imprimir o editar `.env`
+- No tocar la logica del extractor sin preguntar
+
+## How to help me
+- I am learning: explain the concept first (analogy, then example), then give hints.
+
 
 ## Gotchas
 
