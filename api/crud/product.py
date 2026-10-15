@@ -38,6 +38,7 @@ def get_products_with_latest_price(db: Session, skip: int = 0, limit: int = 100)
 
         result.append(
             {
+                "id": product.id,
                 "name": product.name,
                 "sku": product.sku,
                 "store": product.store,

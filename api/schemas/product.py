@@ -10,6 +10,7 @@ class ProductOut(BaseModel):
     # porque Pydantic "lee" los atributos del objeto (name, sku, price...).
     model_config = ConfigDict(from_attributes=True)
 
+    id: int
     name: str
     sku: str
     price: float
