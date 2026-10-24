@@ -4,19 +4,26 @@
 [![PostgreSQL](https://img.shields.io/badge/postgreSQL-16-4169E1.svg?logo=postgresql&logoColor=white)](https://www.postgresql.org/)
 ![Run Status](https://github.com/richiechz-dev/garden-center-spy/actions/workflows/scrape.yml/badge.svg)
 
-Scraper en Python para extraer precios de plantas consumiendo endpoints JSON internos de tiendas (descubiertos vía DevTools, no scraping HTML). Pipeline ETL con persistencia en PostgreSQL.
+Pipeline ETL construido en Python para extraer precios de plantas consumiendo endpoints JSON internos de diferentes tiendas en línea (descubiertos vía DevTools, no scraping HTML) asegurando la persistencia y trazabilidad en PostgreSQL.
 
 ## Objetivo
 
-Obtener datos de precios de plantas para usarlos como base de un pipeline (extracción y posterior carga a base de datos).
+Obtener datos de precios de plantas para usarlos como base de un pipeline (extracción y posterior carga a base de datos) y obtener un historial para su proximo análisis. 
+
+Este sistema surge para resolver un caso de uso particular que es la toma de decisiones en un **comercio familiar de plantas y jardinería en Hidalgo**, resolviendo la falta de un mercado transparente de precios a través de:
+
+- **Centralización y seguimiento histórico:** Registrar cómo fluctúan los costos y precios de proveedores clave a lo largo del tiempo para identificar tendencias y estacionalidades.
+- **Optimización de compras y precios:** Contar con datos empíricos que faciliten la planeación y la definición de márgenes de ganancia competitivos en la región.
+- **Automatización de inteligencia de mercado:** Eliminar la revisión manual diaria de múltiples fuentes de información digital.
+carga a base de datos) y obtener un historial para su posterior análisis.
 
 ## Tech Stack
 
 - **Python 3.14+** — lenguaje principal
 - **Pydantic** — validación y modelado de datos
 - **SQLAlchemy** — ORM para persistencia en PostgreSQL
-- **Requests** — consumo de APIs JSON
-- **Docker Compose** — infraestructura de base de datos (desarrollo local)
+- **Requests** — consumo de APIs internas JSON
+- **Docker Compose** — infraestructura de base de datos (desarrollo local únicamente)
 - **Neon (PostgreSQL)** — base de datos persistente en producción
 - **pytest** — tests unitarios
 
@@ -68,9 +75,9 @@ garden-center-spy/
 
 ## Alcance actual
 
-Los precios se extraen únicamente de la sucursal de Hidalgo (`physicalStoreId=8774`) de Home Depot MX y de la categoría de IKEA configurada en `IKEA_CATEGORY`. Los precios pueden variar entre sucursales de Home Depot MX; esto es una limitación conocida del MVP, no soporta multi-sucursal aún.
+Los precios se extraen únicamente de la sucursal de Hidalgo (`physicalStoreId=8774`) de Home Depot MX y de la tienda IKEA MX a través de la categoría configurada en `IKEA_CATEGORY`. Los precios pueden variar entre sucursales de Home Depot MX dependiendo la tienda física; esto es una limitación conocida del MVP, no soporta multi-sucursal de un solo proveedor aún.
 
-### Categorías de IKEA
+### Categorías de IKEA (Método Post)
 
 `IKEA_CATEGORY` es el código de categoría que se manda en el body del POST a la API de IKEA (campo `searchParameters.input`). Ejemplo para plantas naturales:
 
@@ -116,6 +123,7 @@ Crea las tablas de la BD (solo primera vez):
 uv run python -m load.connection
 ```
 
+<!--
 Si **ya tenías** la BD creada con el schema anterior, `create_all` no altera tablas existentes; corre una vez los `ALTER` para agregar las columnas nuevas y el constraint compuesto. Verifica antes el nombre real de la constraint con `\d products`; si algo falla a mitad de bloque, ejecuta `ROLLBACK;` y vuelve a empezar:
 
 ```sql
@@ -127,7 +135,7 @@ ALTER TABLE products ADD COLUMN category VARCHAR;
 ALTER TABLE products ADD COLUMN measurement VARCHAR;
 COMMIT;
 ```
-
+-->
 ## Uso
 
 ```bash
