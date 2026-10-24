@@ -8,9 +8,9 @@ Pipeline ETL construido en Python para extraer precios de plantas consumiendo en
 
 ## Objetivo
 
-Obtener datos de precios de plantas para usarlos como base de un pipeline (extracción y posterior carga a base de datos) y obtener un historial para su proximo análisis. 
+Obtener datos de precios de plantas para usarlos como base de un pipeline (extracción y posterior carga a base de datos) y obtener un historial para un proximo análisis. 
 
-Este sistema surge para resolver un caso de uso particular que es la toma de decisiones en un **comercio familiar de plantas y jardinería en Hidalgo**, resolviendo la falta de un mercado transparente de precios a través de:
+Este sistema surge para resolver un caso de uso particular que es la toma de decisiones en un **comercio familiar de plantas y jardinería en el estado de Hidalgo**, resolviendo la falta de un mercado transparente de precios a través de:
 
 - **Centralización y seguimiento histórico:** Registrar cómo fluctúan los costos y precios de proveedores clave a lo largo del tiempo para identificar tendencias y estacionalidades.
 - **Optimización de compras y precios:** Contar con datos empíricos que faciliten la planeación y la definición de márgenes de ganancia competitivos en la región.
